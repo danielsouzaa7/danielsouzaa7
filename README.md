@@ -24,9 +24,23 @@ O que procuro: uma posição em **Dados / BI / Analytics** onde entender o negó
 MVP acadêmico de gestão financeira para quem vive de renda variável. Interface construída em HTML semântico e Tailwind CSS v4, com design system próprio em tokens e layout responsivo.
 🔗 **[Demo ao vivo](https://danielsouzaa7.github.io/velofin-fintech/)** · `HTML` `CSS` `Tailwind CSS v4` · FIAP 1TDS, Fase 4
 
-### PULSE — Marketplace Decision Intelligence · _em construção_
+---
+
+## Projetos em desenvolvimento
+
+Os três projetos abaixo estão **em construção** e evoluem de forma incremental. A documentação de cada um separa o que já está implementado do que ainda é planejado.
+
+### 🚧 [PULSE — Marketplace Decision Intelligence](https://github.com/danielsouzaa7/pulse-marketplace-decision-intelligence) · público
 Projeto autoral que transforma sinais de marketplace em diagnóstico, priorização e decisão: SQL analítico, Python, modelagem dimensional, experimentação e camada de IA — sobre **dados sintéticos**. Nasce da experiência real de operação, sem usar nenhum dado proprietário.
-_Repositório ainda não publicado — será aberto quando a implementação sustentar o que promete._
+`Python` `DuckDB` `SQL` `pandas` `Streamlit` · **Status:** 🚧 Em construção
+
+### 🚧 Operação do Aniversário · repositório privado
+Aplicação Next.js + Postgres para um evento com rateio e Pix: modelo de dados de 13 tabelas com enums, constraints, triggers e trilha de auditoria. Base do futuro Event Operations OS.
+`Next.js` `TypeScript` `PostgreSQL` · **Status:** 🚧 Em construção
+
+### 🚧 Fricasa OS · repositório privado
+Projeto de cliente: sistema para uma empresa de climatização — site, painel de operação e atendimento por WhatsApp com agente de IA.
+`TypeScript` `Supabase` `Vercel` `Railway` · **Status:** 🚧 Em construção
 
 > Outros trabalhos — sistemas para clientes e projetos acadêmicos — estão em repositórios privados por envolverem dados de terceiros. Posso apresentá-los em conversa.
 
@@ -46,7 +60,7 @@ _Repositório ainda não publicado — será aberto quando a implementação sus
 **Desenvolvimento**
 `JavaScript` · `TypeScript` · `HTML` · `CSS` · `Git`
 
-_Este perfil está em construção pública: parte do que está acima ainda não tem repositório aberto que sirva de prova. O PULSE existe para fechar exatamente essa lacuna._
+_Este perfil está em construção pública: parte do que está acima ainda não tem repositório aberto que sirva de prova. O PULSE é o repositório aberto que começa a fechar essa lacuna — e segue em construção._
 
 ---
 
