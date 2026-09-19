@@ -16,6 +16,7 @@ Transforma os sinais dispersos de um marketplace em uma lista curta de decisões
 - **Diferencial:** o motor decide, o LLM só narra. Números, prioridades e recomendações saem de funções determinísticas, e um validador confere cada número da resposta do modelo contra a evidência.
 - **Prova:** 656 testes (655 passam; 1 pulado, documentado), sobre dados 100% sintéticos.
 - **Stack:** Python · DuckDB · SQL · pandas · Streamlit · Anthropic SDK
+- **Status:** em construção incremental, sem implantação em produção.
 
 **[Abrir o repositório](https://github.com/danielsouzaa7/pulse-marketplace-decision-intelligence)**
 
