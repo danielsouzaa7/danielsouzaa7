@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 392" width="400" height="392" role="img" aria-labelledby="t d">
+  <title id="t">Como eu construo</title>
+  <desc id="d">Problema, regras, arquitetura, código, testes e produto, em sequência. Quando o problema pede IA, um ramo tracejado sai da arquitetura, passa por dados, modelo e decisão, e volta para os testes.</desc>
+  <style>
+    .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .lbl { font-size: 20px; font-weight: 600; fill: #E6EDF3; }
+    .blbl { font-size: 17px; font-weight: 600; fill: #BC8CFF; }
+    .note { font-size: 15px; fill: #8B949E; }
+
+    .anim { animation-duration: 10s; animation-iteration-count: infinite; animation-timing-function: linear; }
+    .main { animation-name: main; } .branch { animation-name: branch; }
+    .n1 { animation-name: n1; } .n2 { animation-name: n2; } .n3 { animation-name: n3; }
+    .n4 { animation-name: n4; } .n5 { animation-name: n5; } .n6 { animation-name: n6; }
+    .b1 { animation-name: b1; } .b2 { animation-name: b2; } .b3 { animation-name: b3; }
+
+    /* eixo vertical: linhas em 44, 106, 168, 230, 292, 354 — a cada 16% */
+    @keyframes main {
+      0% { transform: translateY(0); opacity: 0; } 3% { opacity: 1; }
+      16% { transform: translateY(62px); } 32% { transform: translateY(124px); }
+      48% { transform: translateY(186px); } 64% { transform: translateY(248px); }
+      80% { transform: translateY(310px); opacity: 1; } 86%, 100% { transform: translateY(310px); opacity: 0; }
+    }
+    /* ramo: sai da arquitetura (32%) e chega aos testes junto com o eixo (64%) */
+    @keyframes branch {
+      0%, 31.9% { transform: translate(0, 0); opacity: 0; }
+      32% { transform: translate(0, 0); opacity: 1; }
+      36% { transform: translate(86px, 0); }
+      58% { transform: translate(86px, 124px); }
+      64% { transform: translate(-48px, 124px); opacity: 1; }
+      66%, 100% { transform: translate(-48px, 124px); opacity: 0; }
+    }
+    @keyframes n1 { 0%,1%    { opacity: 0; } 2%,93%  { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes n2 { 0%,15.9% { opacity: 0; } 16%,93% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes n3 { 0%,31.9% { opacity: 0; } 32%,93% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes n4 { 0%,47.9% { opacity: 0; } 48%,93% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes n5 { 0%,63.9% { opacity: 0; } 64%,93% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes n6 { 0%,79.9% { opacity: 0; } 80%,93% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes b1 { 0%,42.3% { opacity: 0; } 42.4%,93% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes b2 { 0%,49.0% { opacity: 0; } 49.1%,93% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes b3 { 0%,55.8% { opacity: 0; } 55.9%,93% { opacity: 1; } 100% { opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .anim { animation: none !important; }
+      .moving { display: none; }
+    }
+  </style>
+  <defs><filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter></defs>
+
+  <rect x="0.5" y="0.5" width="399" height="391" rx="16" fill="#0D1117" stroke="#21262D"/>
+
+  <line x1="40" y1="44" x2="40" y2="354" stroke="#30363D" stroke-width="2"/>
+  <path d="M184 168 H270 V292 H136" fill="none" stroke="#A371F7" stroke-opacity=".55" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <g class="f">
+    <text class="lbl" x="64" y="51">Problema</text>
+    <text class="lbl" x="64" y="113">Regras</text>
+    <text class="lbl" x="64" y="175">Arquitetura</text>
+    <text class="lbl" x="64" y="237">Código</text>
+    <text class="lbl" x="64" y="299">Testes</text>
+    <text class="lbl" x="64" y="361">Produto</text>
+    <text class="blbl" x="286" y="210">Dados</text>
+    <text class="blbl" x="286" y="248">Modelo / IA</text>
+    <text class="blbl" x="286" y="286">Decisão</text>
+    <text class="note" x="196" y="146">quando o problema pede IA</text>
+  </g>
+
+  <g fill="#0D1117" stroke="#30363D" stroke-width="2">
+    <circle cx="40" cy="44" r="10"/><circle cx="40" cy="106" r="10"/><circle cx="40" cy="168" r="10"/>
+    <circle cx="40" cy="230" r="10"/><circle cx="40" cy="292" r="10"/><circle cx="40" cy="354" r="10"/>
+    <circle cx="270" cy="204" r="7"/><circle cx="270" cy="242" r="7"/><circle cx="270" cy="280" r="7"/>
+  </g>
+  <circle class="anim n1" cx="40" cy="44"  r="10" fill="#58A6FF"/>
+  <circle class="anim n2" cx="40" cy="106" r="10" fill="#58A6FF"/>
+  <circle class="anim n3" cx="40" cy="168" r="10" fill="#58A6FF"/>
+  <circle class="anim n4" cx="40" cy="230" r="10" fill="#58A6FF"/>
+  <circle class="anim n5" cx="40" cy="292" r="10" fill="#3FB950"/>
+  <circle class="anim n6" cx="40" cy="354" r="10" fill="#F0F6FC"/>
+  <circle class="anim b1" cx="270" cy="204" r="7" fill="#A371F7"/>
+  <circle class="anim b2" cx="270" cy="242" r="7" fill="#A371F7"/>
+  <circle class="anim b3" cx="270" cy="280" r="7" fill="#A371F7"/>
+
+  <g class="moving">
+    <g class="anim main">
+      <circle cx="40" cy="44" r="9" fill="#58A6FF" opacity=".6" filter="url(#glow)"/>
+      <circle cx="40" cy="44" r="4.5" fill="#F0F6FC"/>
+    </g>
+    <g class="anim branch">
+      <circle cx="184" cy="168" r="8" fill="#A371F7" opacity=".6" filter="url(#glow)"/>
+      <circle cx="184" cy="168" r="4" fill="#E2C5FF"/>
+    </g>
+  </g>
+</svg>

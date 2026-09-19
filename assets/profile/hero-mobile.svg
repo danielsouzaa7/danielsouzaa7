@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240" role="img" aria-labelledby="t d">
+  <title id="t">Daniel Souza — Software · Product · AI Engineering</title>
+  <desc id="d">Uma informação percorre três portões em sequência: afirmado, verificado e decidido.</desc>
+  <style>
+    .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .name { font-size: 44px; font-weight: 700; fill: #F0F6FC; letter-spacing: -1.1px; }
+    .axes { font-size: 19px; font-weight: 500; fill: #8B949E; }
+    .lbl { font-size: 19px; font-weight: 600; }
+    .a { fill: #D29922; } .v { fill: #3FB950; } .d { fill: #F0F6FC; }
+
+    .anim { animation-duration: 9s; animation-iteration-count: infinite; animation-timing-function: linear; }
+    .ping { transform-box: fill-box; transform-origin: center; }
+    .pulse { animation-name: travel; } .pcolor { animation-name: tint; }
+    .s0 { animation-name: s0; } .s1 { animation-name: s1; } .s2 { animation-name: s2; } .s3 { animation-name: s3; }
+    .gA { animation-name: gA; } .gV { animation-name: gV; } .gD { animation-name: gD; }
+    .pA { animation-name: pA; } .pV { animation-name: pV; } .pD { animation-name: pD; }
+
+    @keyframes travel {
+      0% { transform: translateX(0); opacity: 0; } 3% { opacity: 1; }
+      18% { transform: translateX(56px); } 26% { transform: translateX(56px); }
+      42% { transform: translateX(176px); } 50% { transform: translateX(176px); }
+      66% { transform: translateX(296px); } 74% { transform: translateX(296px); }
+      88% { transform: translateX(352px); opacity: 1; } 92%, 100% { transform: translateX(352px); opacity: 0; }
+    }
+    @keyframes tint { 0%, 17.9% { fill: #8B949E; } 18%, 41.9% { fill: #D29922; } 42%, 65.9% { fill: #3FB950; } 66%, 100% { fill: #F0F6FC; } }
+    @keyframes s0 { 0%,3% { stroke-dashoffset: 56; } 18%,93% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
+    @keyframes s1 { 0%,26% { stroke-dashoffset: 120; } 42%,93% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
+    @keyframes s2 { 0%,50% { stroke-dashoffset: 120; } 66%,93% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
+    @keyframes s3 { 0%,74% { stroke-dashoffset: 56; } 88%,93% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
+    @keyframes gA { 0%,17.9% { opacity: 0; } 18%,93% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes gV { 0%,41.9% { opacity: 0; } 42%,93% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes gD { 0%,65.9% { opacity: 0; } 66%,93% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes pA { 0%,17.9% { opacity: 0; transform: scale(1); } 18% { opacity: .9; transform: scale(1); } 26%,100% { opacity: 0; transform: scale(2.4); } }
+    @keyframes pV { 0%,41.9% { opacity: 0; transform: scale(1); } 42% { opacity: .9; transform: scale(1); } 50%,100% { opacity: 0; transform: scale(2.4); } }
+    @keyframes pD { 0%,65.9% { opacity: 0; transform: scale(1); } 66% { opacity: .9; transform: scale(1); } 74%,100% { opacity: 0; transform: scale(2.4); } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .anim { animation: none !important; }
+      .moving, .ring-ping { display: none; }
+    }
+  </style>
+  <defs><filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter></defs>
+
+  <rect x="0.5" y="0.5" width="399" height="239" rx="16" fill="#0D1117" stroke="#21262D"/>
+  <text class="f name" x="24" y="72">Daniel Souza</text>
+  <text class="f axes" x="25" y="104">Software · Product · AI Engineering</text>
+
+  <line x1="24" y1="164" x2="376" y2="164" stroke="#21262D" stroke-width="2"/>
+  <line class="anim s0" x1="24"  y1="164" x2="80"  y2="164" stroke="#8B949E" stroke-opacity=".55" stroke-width="2" stroke-dasharray="56"/>
+  <line class="anim s1" x1="80"  y1="164" x2="200" y2="164" stroke="#D29922" stroke-width="2" stroke-dasharray="120"/>
+  <line class="anim s2" x1="200" y1="164" x2="320" y2="164" stroke="#3FB950" stroke-width="2" stroke-dasharray="120"/>
+  <line class="anim s3" x1="320" y1="164" x2="376" y2="164" stroke="#F0F6FC" stroke-opacity=".85" stroke-width="2" stroke-dasharray="56"/>
+
+  <g fill="#0D1117" stroke="#30363D" stroke-width="2">
+    <circle cx="80" cy="164" r="10"/><circle cx="200" cy="164" r="10"/><circle cx="320" cy="164" r="10"/>
+  </g>
+  <circle class="anim gA" cx="80"  cy="164" r="10" fill="#0D1117" stroke="#D29922" stroke-width="3"/>
+  <circle class="anim gV" cx="200" cy="164" r="10" fill="#3FB950"/>
+  <circle class="anim gD" cx="320" cy="164" r="10" fill="#F0F6FC"/>
+  <g class="ring-ping" fill="none" stroke-width="2">
+    <circle class="anim pA ping" cx="80"  cy="164" r="10" stroke="#D29922"/>
+    <circle class="anim pV ping" cx="200" cy="164" r="10" stroke="#3FB950"/>
+    <circle class="anim pD ping" cx="320" cy="164" r="10" stroke="#F0F6FC"/>
+  </g>
+
+  <g class="f" text-anchor="middle">
+    <text class="lbl a" x="80"  y="206">afirmado</text>
+    <text class="lbl v" x="200" y="206">verificado</text>
+    <text class="lbl d" x="320" y="206">decidido</text>
+  </g>
+
+  <g class="moving">
+    <g class="anim pulse">
+      <circle class="anim pcolor" cx="24" cy="164" r="8" filter="url(#glow)" opacity=".7"/>
+      <circle class="anim pcolor" cx="24" cy="164" r="4.5"/>
+    </g>
+  </g>
+</svg>

@@ -1,4 +1,4 @@
-<img src="assets/profile/hero.svg" width="100%" alt="Daniel Souza — Software · Product · AI Engineering. Uma informação atravessa três portões em sequência: afirmado, verificado e decidido.">
+<picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/profile/hero-mobile.svg"><img src="assets/profile/hero.svg" width="100%" alt="Daniel Souza — Software · Product · AI Engineering. Uma informação atravessa três portões em sequência: afirmado, verificado e decidido."></picture>
 
 **Construo sistemas que separam o que foi afirmado, o que foi verificado e o que foi decidido — do problema real ao produto testado.**
 
@@ -6,7 +6,7 @@ Venho da operação — marketplace, CRM e indicadores — e por isso começo pe
 
 ## Projetos em destaque
 
-<a href="https://github.com/danielsouzaa7/pulse-marketplace-decision-intelligence"><img src="assets/projects/pulse.svg" width="100%" alt="Pulse: a média da empresa fica dentro da faixa esperada enquanto a zona 7 sai dela; o motor marca a anomalia e ordena as prioridades, e o LLM recebe apenas a evidência para narrar."></a>
+<a href="https://github.com/danielsouzaa7/pulse-marketplace-decision-intelligence"><picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/projects/pulse-mobile.svg"><img src="assets/projects/pulse.svg" width="100%" alt="Pulse: a média da empresa fica dentro da faixa esperada enquanto a zona 7 sai dela; o motor marca a anomalia e ordena as prioridades, e o LLM recebe apenas a evidência para narrar."></picture></a>
 
 ### Pulse — Marketplace Decision Intelligence
 
@@ -22,7 +22,7 @@ Transforma os sinais dispersos de um marketplace em uma lista curta de decisões
 
 <br>
 
-<a href="https://github.com/danielsouzaa7/event-operations-os-showcase"><img src="assets/projects/event-operations.svg" width="100%" alt="Event Operations OS: três fatos acendem em sequência — confirmou, declarou e recebido — e depois se separam: são fatos distintos, e nenhum vira o outro sem verificação."></a>
+<a href="https://github.com/danielsouzaa7/event-operations-os-showcase"><picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/projects/event-operations-mobile.svg"><img src="assets/projects/event-operations.svg" width="100%" alt="Event Operations OS: três fatos acendem em sequência — confirmou, declarou e recebido — e depois se separam: são fatos distintos, e nenhum vira o outro sem verificação."></picture></a>
 
 ### Event Operations OS
 
@@ -40,7 +40,7 @@ Sistema para casas de eventos pagos: convidados, RSVP, Pix, check-in na porta, m
 
 ## Como eu construo
 
-<img src="assets/profile/workflow.svg" width="100%" alt="Problema, regras, arquitetura, código, testes e produto, em sequência. Quando o problema pede IA, um ramo sai da arquitetura, passa por dados, modelo e decisão, e volta para os testes.">
+<picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/profile/workflow-mobile.svg"><img src="assets/profile/workflow.svg" width="100%" alt="Problema, regras, arquitetura, código, testes e produto, em sequência. Quando o problema pede IA, um ramo sai da arquitetura, passa por dados, modelo e decisão, e volta para os testes."></picture>
 
 Não começo pela tecnologia. Começo pelo problema — e pelos estados que não podem se confundir.
 
