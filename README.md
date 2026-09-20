@@ -92,3 +92,11 @@ Números de suítes que rodam, cada um do seu projeto — sem somar um no outro.
 <img src="assets/profile/footer.svg" width="100%" alt="Um sinal atravessa dados, decisão e produto.">
 
 Quer conversar sobre dados, analytics, IA aplicada ou software? Me chame no **[LinkedIn](https://www.linkedin.com/in/danielsouzavalerio)** — ou comece pelos projetos acima.
+
+---
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/danielsouzaa7/danielsouzaa7/output/snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/danielsouzaa7/danielsouzaa7/output/snake-light.svg">
+  <img src="https://raw.githubusercontent.com/danielsouzaa7/danielsouzaa7/output/snake-dark.svg" width="100%" alt="Animação da grade de contribuições do GitHub">
+</picture>

@@ -1,0 +1,41 @@
+name: snake
+
+# Gera a animação da grade de contribuições e publica os SVGs na branch `output`,
+# para não misturar arquivo gerado com o conteúdo do perfil na `main`.
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snake
+  cancel-in-progress: true
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gerar os SVGs da grade de contribuições
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          # Paleta do perfil: grade em azul/ciano (dados), cobra em violeta (IA).
+          outputs: |
+            dist/snake-dark.svg?color_snake=#A371F7&color_dots=#161B22,#1F3A5F,#275D8C,#337FB5,#39C5CF
+            dist/snake-light.svg?color_snake=#8957E5&color_dots=#EBEDF0,#CFE8F3,#9FD3E6,#5EB3D6,#2A7FA8
+
+      - name: Publicar na branch output
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd dist
+          git init -q
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add snake-dark.svg snake-light.svg
+          git commit -q -m "chore: atualizar animação de contribuições"
+          git push -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:output
