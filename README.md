@@ -1,6 +1,8 @@
 <picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/profile/hero-mobile.svg"><img src="assets/profile/hero.svg" width="100%" alt="Daniel Souza — Dados, Business Intelligence e IA aplicada. Sinais de marketplace, CRM e operação convergem para dados, passam por análise e se dividem em decisão, software e produto."></picture>
 
-**Transformo dados de operação em decisões, sistemas e produtos.**
+**Dados & Business Intelligence · Analytics · Marketplace · IA aplicada · Engenharia de software e produto.**
+
+Começo pela decisão que o negócio precisa tomar — e só depois escolho entre dados, software ou IA para sustentá-la.
 
 ## Sobre
 
