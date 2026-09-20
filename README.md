@@ -71,15 +71,15 @@ Quando o problema pede análise, os dados abrem um ramo de **BI e Analytics**; q
 
 ## Stack
 
-<picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/profile/stack-system-mobile.svg"><img src="assets/profile/stack-system.svg" width="100%" alt="Três clusters de ferramentas — Dados e BI, Engenharia, IA aplicada — e um sinal que passa por um deles conforme o problema."></picture>
+Escolho a ferramenta depois de entender o problema — ela é consequência dele, não o contrário.
+
+<picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/profile/stack-icons-mobile.svg"><img src="assets/profile/stack-icons.svg" width="100%" alt="Ferramentas por grupo — Dados e BI: Python, SQL, Power BI, DuckDB, pandas. Engenharia: TypeScript, JavaScript, React, Next.js, PostgreSQL, Supabase, Git. IA aplicada: Anthropic SDK e validação de saída."></picture>
 
 **Dados & BI** — SQL · Power BI · Python · pandas · DuckDB
 
-**Engenharia** — TypeScript · React · Next.js · PostgreSQL · Supabase
+**Engenharia** — TypeScript · JavaScript · React · Next.js · PostgreSQL · Supabase · Git
 
 **IA aplicada** — LLMs · Anthropic SDK · workflows · validação de saída contra dados estruturados
-
-A ferramenta é consequência do problema, não o contrário.
 
 ## Engenharia que eu consigo provar
 
