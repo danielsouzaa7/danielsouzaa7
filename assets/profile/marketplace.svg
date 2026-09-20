@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" width="700" height="280" role="img" aria-labelledby="t d">
+  <title id="t">Da operação para a engenharia</title>
+  <desc id="d">Pedidos chegam e percorrem a operação, viram métricas, depois insights e finalmente sistemas. A operação de marketplace somou mais de R$ 1,1 milhão em vendas e mais de 5 mil pedidos.</desc>
+  <style>
+    .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .stat { font-size: 20px; font-weight: 700; fill: #F0F6FC; }
+    .unit { font-size: 16px; font-weight: 500; fill: #8B949E; }
+    .lbl  { font-size: 16px; font-weight: 600; fill: #C9D1D9; }
+
+    /* 16s: fluxo contínuo de pedidos, sem pressa. */
+    .anim { animation-duration: 16s; animation-iteration-count: infinite; animation-timing-function: linear; }
+    .e1 { animation-name: ev; } .e2 { animation-name: ev; animation-delay: -4s; }
+    .e3 { animation-name: ev; animation-delay: -8s; } .e4 { animation-name: ev; animation-delay: -12s; }
+    .n1 { animation-name: n1; } .n2 { animation-name: n2; } .n3 { animation-name: n3; }
+    .n4 { animation-name: n4; } .n5 { animation-name: n5; }
+    .c1 { animation-name: c1; } .c2 { animation-name: c2; }
+
+    @keyframes ev { 0% { transform: translateX(0); opacity: 0; } 3% { opacity: 1; } 72% { transform: translateX(580px); opacity: 1; } 78%, 100% { transform: translateX(580px); opacity: 0; } }
+    @keyframes n1 { 0%, 2% { opacity: .3; } 5%, 94% { opacity: 1; } 100% { opacity: .3; } }
+    @keyframes n2 { 0%, 19% { opacity: .3; } 22%, 94% { opacity: 1; } 100% { opacity: .3; } }
+    @keyframes n3 { 0%, 36% { opacity: .3; } 39%, 94% { opacity: 1; } 100% { opacity: .3; } }
+    @keyframes n4 { 0%, 53% { opacity: .3; } 56%, 94% { opacity: 1; } 100% { opacity: .3; } }
+    @keyframes n5 { 0%, 70% { opacity: .3; } 73%, 94% { opacity: 1; } 100% { opacity: .3; } }
+    @keyframes c1 { 0%, 24% { opacity: 0; transform: translateY(6px); } 30%, 94% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+    @keyframes c2 { 0%, 30% { opacity: 0; transform: translateY(6px); } 36%, 94% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) { .anim { animation: none !important; } .moving { display: none; } }
+  </style>
+  <defs><filter id="s3" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter></defs>
+
+  <rect x="0.5" y="0.5" width="699" height="279" rx="18" fill="#0D1117" stroke="#21262D"/>
+
+  <!-- números reais da operação -->
+  <g class="anim c1">
+    <rect x="30" y="34" width="258" height="50" rx="12" fill="#161B22" stroke="#21262D"/>
+    <text class="f stat" x="50" y="66">R$ 1,1 mi+ <tspan class="unit">em vendas</tspan></text>
+  </g>
+  <g class="anim c2">
+    <rect x="304" y="34" width="206" height="50" rx="12" fill="#161B22" stroke="#21262D"/>
+    <text class="f stat" x="324" y="66">5.000+ <tspan class="unit">pedidos</tspan></text>
+  </g>
+
+  <line x1="70" y1="170" x2="650" y2="170" stroke="#30363D" stroke-width="2"/>
+
+  <g fill="#39C5CF">
+    <circle class="anim n1" cx="70"  cy="170" r="11"/>
+    <circle class="anim n2" cx="215" cy="170" r="11"/>
+    <circle class="anim n3" cx="360" cy="170" r="11"/>
+  </g>
+  <circle class="anim n4" cx="505" cy="170" r="11" fill="#58A6FF"/>
+  <circle class="anim n5" cx="650" cy="170" r="11" fill="#3FB950"/>
+
+  <g class="f lbl" text-anchor="middle">
+    <text x="70"  y="212">pedidos</text>
+    <text x="215" y="212">operação</text>
+    <text x="360" y="212">métricas</text>
+    <text x="505" y="212">insights</text>
+    <text x="650" y="212">sistemas</text>
+  </g>
+
+  <g class="moving">
+    <g class="anim e1"><circle cx="70" cy="170" r="5" fill="#39C5CF" filter="url(#s3)" opacity=".8"/><circle cx="70" cy="170" r="3.5" fill="#D2FAFF"/></g>
+    <g class="anim e2"><circle cx="70" cy="170" r="5" fill="#39C5CF" filter="url(#s3)" opacity=".8"/><circle cx="70" cy="170" r="3.5" fill="#D2FAFF"/></g>
+    <g class="anim e3"><circle cx="70" cy="170" r="5" fill="#39C5CF" filter="url(#s3)" opacity=".8"/><circle cx="70" cy="170" r="3.5" fill="#D2FAFF"/></g>
+    <g class="anim e4"><circle cx="70" cy="170" r="5" fill="#39C5CF" filter="url(#s3)" opacity=".8"/><circle cx="70" cy="170" r="3.5" fill="#D2FAFF"/></g>
+  </g>
+</svg>

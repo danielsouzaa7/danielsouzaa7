@@ -1,109 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 270" width="760" height="270" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 400" width="840" height="400" role="img" aria-labelledby="t d">
   <title id="t">Como eu construo</title>
-  <desc id="d">Problema, regras, arquitetura, código, testes e produto, em sequência. Quando o problema pede IA, um ramo tracejado sai da arquitetura, passa por dados, modelo e decisão, e volta para os testes: a IA também é validada antes de virar produto.</desc>
+  <desc id="d">Problema, operação, dados, regras, arquitetura, implementação, validação e produto, em sequência. A partir dos dados saem dois ramos opcionais — BI e Analytics, IA e automação — e os dois voltam para a validação antes de virar produto.</desc>
   <style>
     .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-    .lbl { font-size: 21px; font-weight: 600; fill: #E6EDF3; }
-    .blbl { font-size: 19px; font-weight: 600; fill: #BC8CFF; }
-    .note { font-size: 16px; fill: #8B949E; }
+    .lbl { font-size: 16px; font-weight: 600; fill: #C9D1D9; }
+    .bi  { font-size: 17px; font-weight: 600; fill: #39C5CF; }
+    .ia  { font-size: 17px; font-weight: 600; fill: #BC8CFF; }
 
-    .anim { animation-duration: 10s; animation-iteration-count: infinite; animation-timing-function: linear; }
-    .main   { animation-name: main; }
-    .branch { animation-name: branch; }
-    .n1 { animation-name: n1; } .n2 { animation-name: n2; } .n3 { animation-name: n3; }
-    .n4 { animation-name: n4; } .n5 { animation-name: n5; } .n6 { animation-name: n6; }
-    .b1 { animation-name: b1; } .b2 { animation-name: b2; } .b3 { animation-name: b3; }
+    /* 13s: um ciclo completo de construção. */
+    .anim { animation-duration: 13s; animation-iteration-count: infinite; animation-timing-function: linear; }
+    .main { animation-name: main; } .bbi { animation-name: bbi; } .bia { animation-name: bia; }
+    .s1 { animation-name: s1; } .s2 { animation-name: s2; } .s3 { animation-name: s3; } .s4 { animation-name: s4; }
+    .s5 { animation-name: s5; } .s6 { animation-name: s6; } .s7 { animation-name: s7; } .s8 { animation-name: s8; }
+    .kbi { animation-name: kbi; } .kia { animation-name: kia; }
 
-    /* nós: 80, 200, 320, 440, 560, 680 — a cada 16% */
     @keyframes main {
-      0%   { transform: translateX(0);     opacity: 0; }
-      3%   { opacity: 1; }
-      16%  { transform: translateX(120px); }
-      32%  { transform: translateX(240px); }
-      48%  { transform: translateX(360px); }
-      64%  { transform: translateX(480px); }
-      80%  { transform: translateX(600px); opacity: 1; }
-      86%, 100% { transform: translateX(600px); opacity: 0; }
+      0% { transform: translateX(0); opacity: 0; } 2% { opacity: 1; }
+      10% { transform: translateX(103px); } 20% { transform: translateX(206px); } 30% { transform: translateX(309px); }
+      40% { transform: translateX(411px); } 50% { transform: translateX(514px); } 60% { transform: translateX(617px); }
+      70% { transform: translateX(720px); opacity: 1; } 76%, 100% { transform: translateX(720px); opacity: 0; }
     }
-    /* ramo: sai da arquitetura (32%) e chega aos testes junto com o eixo principal (64%) */
-    @keyframes branch {
-      0%, 31.9% { transform: translate(0, 0);       opacity: 0; }
-      32%       { transform: translate(0, 0);       opacity: 1; }
-      38%       { transform: translate(0, 108px); }
-      58%       { transform: translate(240px, 108px); }
-      64%       { transform: translate(240px, 0);   opacity: 1; }
-      66%, 100% { transform: translate(240px, 0);   opacity: 0; }
+    /* os dois ramos saem dos dados e voltam para a validação */
+    @keyframes bbi {
+      0%, 29.9% { transform: translate(0,0); opacity: 0; } 30% { transform: translate(0,0); opacity: 1; }
+      34% { transform: translate(0,-100px); } 58% { transform: translate(411px,-100px); }
+      62% { transform: translate(411px,0); opacity: 1; } 64%, 100% { transform: translate(411px,0); opacity: 0; }
     }
-    @keyframes n1 { 0%,1%    { opacity: 0; } 2%,93%  { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes n2 { 0%,15.9% { opacity: 0; } 16%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes n3 { 0%,31.9% { opacity: 0; } 32%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes n4 { 0%,47.9% { opacity: 0; } 48%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes n5 { 0%,63.9% { opacity: 0; } 64%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes n6 { 0%,79.9% { opacity: 0; } 80%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes b1 { 0%,37.9% { opacity: 0; } 38%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes b2 { 0%,47.9% { opacity: 0; } 48%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes b3 { 0%,57.9% { opacity: 0; } 58%,93% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes bia {
+      0%, 29.9% { transform: translate(0,0); opacity: 0; } 30% { transform: translate(0,0); opacity: 1; }
+      34% { transform: translate(0,100px); } 58% { transform: translate(411px,100px); }
+      62% { transform: translate(411px,0); opacity: 1; } 64%, 100% { transform: translate(411px,0); opacity: 0; }
+    }
+    @keyframes s1 { 0%, 1%  { opacity: .28; } 3%, 92%  { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes s2 { 0%, 9%  { opacity: .28; } 11%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes s3 { 0%, 19% { opacity: .28; } 21%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes s4 { 0%, 29% { opacity: .28; } 31%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes s5 { 0%, 39% { opacity: .28; } 41%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes s6 { 0%, 49% { opacity: .28; } 51%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes s7 { 0%, 59% { opacity: .28; } 61%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes s8 { 0%, 69% { opacity: .28; } 71%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes kbi { 0%, 45% { opacity: .28; } 47%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes kia { 0%, 45% { opacity: .28; } 47%, 92% { opacity: 1; } 100% { opacity: .28; } }
 
-    @media (prefers-reduced-motion: reduce) {
-      .anim { animation: none !important; }
-      .moving { display: none; }
-    }
+    @media (prefers-reduced-motion: reduce) { .anim { animation: none !important; } .moving { display: none; } }
   </style>
+  <defs><filter id="s4f" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter></defs>
 
-  <defs>
-    <filter id="glow" x="-200%" y="-200%" width="500%" height="500%">
-      <feGaussianBlur stdDeviation="4"/>
-    </filter>
-  </defs>
+  <rect x="0.5" y="0.5" width="839" height="399" rx="20" fill="#0D1117" stroke="#21262D"/>
 
-  <rect x="0.5" y="0.5" width="759" height="269" rx="18" fill="#0D1117" stroke="#21262D"/>
+  <line x1="60" y1="210" x2="780" y2="210" stroke="#30363D" stroke-width="2"/>
+  <path d="M266 210 V110 H677 V210" fill="none" stroke="#39C5CF" stroke-opacity=".45" stroke-width="2" stroke-dasharray="6 6"/>
+  <path d="M266 210 V310 H677 V210" fill="none" stroke="#A371F7" stroke-opacity=".45" stroke-width="2" stroke-dasharray="6 6"/>
 
-  <!-- eixo principal -->
-  <line x1="80" y1="86" x2="680" y2="86" stroke="#30363D" stroke-width="2"/>
-  <!-- ramo de IA: opcional, por isso tracejado -->
-  <path d="M320 86 V194 H560 V86" fill="none" stroke="#A371F7" stroke-opacity=".55" stroke-width="2" stroke-dasharray="6 6"/>
+  <!-- ramos opcionais: a ferramenta entra quando o problema pede -->
+  <circle class="anim kbi" cx="471" cy="110" r="9" fill="#39C5CF"/>
+  <circle class="anim kia" cx="471" cy="310" r="9" fill="#A371F7"/>
+  <text class="f bi" x="471" y="88"  text-anchor="middle">BI · Analytics</text>
+  <text class="f ia" x="471" y="340" text-anchor="middle">IA · Automação</text>
 
-  <g class="f" text-anchor="middle">
-    <text class="lbl" x="80"  y="50">Problema</text>
-    <text class="lbl" x="200" y="50">Regras</text>
-    <text class="lbl" x="320" y="50">Arquitetura</text>
-    <text class="lbl" x="440" y="50">Código</text>
-    <text class="lbl" x="560" y="50">Testes</text>
-    <text class="lbl" x="680" y="50">Produto</text>
+  <!-- espinha -->
+  <circle class="anim s1" cx="60"  cy="210" r="10" fill="#8B949E"/>
+  <circle class="anim s2" cx="163" cy="210" r="10" fill="#39C5CF"/>
+  <circle class="anim s3" cx="266" cy="210" r="11" fill="#39C5CF"/>
+  <circle class="anim s4" cx="369" cy="210" r="10" fill="#58A6FF"/>
+  <circle class="anim s5" cx="471" cy="210" r="10" fill="#58A6FF"/>
+  <circle class="anim s6" cx="574" cy="210" r="10" fill="#58A6FF"/>
+  <circle class="anim s7" cx="677" cy="210" r="11" fill="#3FB950"/>
+  <circle class="anim s8" cx="780" cy="210" r="10" fill="#F0F6FC"/>
 
-    <text class="blbl" x="320" y="236">Dados</text>
-    <text class="blbl" x="440" y="236">Modelo / IA</text>
-    <text class="blbl" x="560" y="236">Decisão</text>
+  <g class="f lbl" text-anchor="middle">
+    <text x="60"  y="186">problema</text>
+    <text x="163" y="248">operação</text>
+    <text x="266" y="186">dados</text>
+    <text x="369" y="248">regras</text>
+    <text x="471" y="186">arquitetura</text>
+    <text x="574" y="248">implementação</text>
+    <text x="677" y="186">validação</text>
+    <text x="780" y="248">produto</text>
   </g>
-  <text class="f note" x="40" y="146">quando o problema</text>
-  <text class="f note" x="40" y="168">pede IA</text>
-
-  <!-- nós apagados -->
-  <g fill="#0D1117" stroke="#30363D" stroke-width="2">
-    <circle cx="80" cy="86" r="10"/><circle cx="200" cy="86" r="10"/><circle cx="320" cy="86" r="10"/>
-    <circle cx="440" cy="86" r="10"/><circle cx="560" cy="86" r="10"/><circle cx="680" cy="86" r="10"/>
-    <circle cx="320" cy="194" r="8"/><circle cx="440" cy="194" r="8"/><circle cx="560" cy="194" r="8"/>
-  </g>
-
-  <!-- nós acesos: azul = construção, verde = validação, branco = produto, violeta = ramo de IA -->
-  <circle class="anim n1" cx="80"  cy="86" r="10" fill="#58A6FF"/>
-  <circle class="anim n2" cx="200" cy="86" r="10" fill="#58A6FF"/>
-  <circle class="anim n3" cx="320" cy="86" r="10" fill="#58A6FF"/>
-  <circle class="anim n4" cx="440" cy="86" r="10" fill="#58A6FF"/>
-  <circle class="anim n5" cx="560" cy="86" r="10" fill="#3FB950"/>
-  <circle class="anim n6" cx="680" cy="86" r="10" fill="#F0F6FC"/>
-  <circle class="anim b1" cx="320" cy="194" r="8" fill="#A371F7"/>
-  <circle class="anim b2" cx="440" cy="194" r="8" fill="#A371F7"/>
-  <circle class="anim b3" cx="560" cy="194" r="8" fill="#A371F7"/>
 
   <g class="moving">
-    <g class="anim main">
-      <circle cx="80" cy="86" r="9" fill="#58A6FF" opacity=".6" filter="url(#glow)"/>
-      <circle cx="80" cy="86" r="4.5" fill="#F0F6FC"/>
-    </g>
-    <g class="anim branch">
-      <circle cx="320" cy="86" r="8" fill="#A371F7" opacity=".6" filter="url(#glow)"/>
-      <circle cx="320" cy="86" r="4" fill="#E2C5FF"/>
-    </g>
+    <g class="anim main"><circle cx="60" cy="210" r="6" fill="#58A6FF" filter="url(#s4f)" opacity=".75"/><circle cx="60" cy="210" r="4" fill="#F0F6FC"/></g>
+    <g class="anim bbi"><circle cx="266" cy="210" r="5" fill="#39C5CF" filter="url(#s4f)" opacity=".75"/><circle cx="266" cy="210" r="3.5" fill="#D2FAFF"/></g>
+    <g class="anim bia"><circle cx="266" cy="210" r="5" fill="#A371F7" filter="url(#s4f)" opacity=".75"/><circle cx="266" cy="210" r="3.5" fill="#E2C5FF"/></g>
   </g>
 </svg>

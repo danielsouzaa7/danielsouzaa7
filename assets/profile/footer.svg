@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 140" width="560" height="140" role="img" aria-labelledby="t d">
+  <title id="t">Dados, decisão, produto</title>
+  <desc id="d">Um sinal atravessa três pontos: dados, decisão e produto.</desc>
+  <style>
+    .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .lbl { font-size: 19px; font-weight: 600; }
+    .cy { fill: #39C5CF; } .gr { fill: #3FB950; } .wh { fill: #F0F6FC; }
+
+    /* 20s: o loop mais lento da página, quase um respiro. */
+    .anim { animation-duration: 20s; animation-iteration-count: infinite; animation-timing-function: linear; }
+    .go { animation-name: go; }
+    .k1 { animation-name: k1; } .k2 { animation-name: k2; } .k3 { animation-name: k3; }
+    @keyframes go {
+      0% { transform: translateX(0); opacity: 0; } 3% { opacity: 1; }
+      30% { transform: translateX(180px); } 60% { transform: translateX(360px); opacity: 1; }
+      66%, 100% { transform: translateX(360px); opacity: 0; }
+    }
+    @keyframes k1 { 0%, 2%  { opacity: .3; } 5%, 92%  { opacity: 1; } 100% { opacity: .3; } }
+    @keyframes k2 { 0%, 29% { opacity: .3; } 32%, 92% { opacity: 1; } 100% { opacity: .3; } }
+    @keyframes k3 { 0%, 59% { opacity: .3; } 62%, 92% { opacity: 1; } 100% { opacity: .3; } }
+    @media (prefers-reduced-motion: reduce) { .anim { animation: none !important; } .moving { display: none; } }
+  </style>
+  <defs><filter id="s8f" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter></defs>
+
+  <rect x="0.5" y="0.5" width="559" height="139" rx="16" fill="#0D1117" stroke="#21262D"/>
+  <line x1="100" y1="62" x2="460" y2="62" stroke="#30363D" stroke-width="2"/>
+
+  <circle class="anim k1" cx="100" cy="62" r="10" fill="#39C5CF"/>
+  <circle class="anim k2" cx="280" cy="62" r="10" fill="#3FB950"/>
+  <circle class="anim k3" cx="460" cy="62" r="10" fill="#F0F6FC"/>
+
+  <g class="f lbl" text-anchor="middle">
+    <text class="cy" x="100" y="104">dados</text>
+    <text class="gr" x="280" y="104">decisão</text>
+    <text class="wh" x="460" y="104">produto</text>
+  </g>
+
+  <g class="moving">
+    <g class="anim go"><circle cx="100" cy="62" r="6" fill="#58A6FF" filter="url(#s8f)" opacity=".75"/><circle cx="100" cy="62" r="4" fill="#F0F6FC"/></g>
+  </g>
+</svg>

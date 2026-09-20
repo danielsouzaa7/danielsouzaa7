@@ -1,92 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 392" width="400" height="392" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="400" height="560" role="img" aria-labelledby="t d">
   <title id="t">Como eu construo</title>
-  <desc id="d">Problema, regras, arquitetura, código, testes e produto, em sequência. Quando o problema pede IA, um ramo tracejado sai da arquitetura, passa por dados, modelo e decisão, e volta para os testes.</desc>
+  <desc id="d">Problema, operação, dados, regras, arquitetura, implementação, validação e produto, em sequência. A partir dos dados saem dois ramos opcionais — BI e Analytics, IA e automação — e os dois voltam para a validação.</desc>
   <style>
     .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-    .lbl { font-size: 20px; font-weight: 600; fill: #E6EDF3; }
-    .blbl { font-size: 17px; font-weight: 600; fill: #BC8CFF; }
-    .note { font-size: 15px; fill: #8B949E; }
+    .lbl { font-size: 17px; font-weight: 600; fill: #C9D1D9; }
+    .bi  { font-size: 15px; font-weight: 600; fill: #39C5CF; }
+    .ia  { font-size: 15px; font-weight: 600; fill: #BC8CFF; }
 
-    .anim { animation-duration: 10s; animation-iteration-count: infinite; animation-timing-function: linear; }
-    .main { animation-name: main; } .branch { animation-name: branch; }
-    .n1 { animation-name: n1; } .n2 { animation-name: n2; } .n3 { animation-name: n3; }
-    .n4 { animation-name: n4; } .n5 { animation-name: n5; } .n6 { animation-name: n6; }
-    .b1 { animation-name: b1; } .b2 { animation-name: b2; } .b3 { animation-name: b3; }
+    .anim { animation-duration: 13s; animation-iteration-count: infinite; animation-timing-function: linear; }
+    .main { animation-name: main; } .br { animation-name: br; }
+    .s1 { animation-name: s1; } .s2 { animation-name: s2; } .s3 { animation-name: s3; } .s4 { animation-name: s4; }
+    .s5 { animation-name: s5; } .s6 { animation-name: s6; } .s7 { animation-name: s7; } .s8 { animation-name: s8; }
+    .kbi { animation-name: kbi; } .kia { animation-name: kia; }
 
-    /* eixo vertical: linhas em 44, 106, 168, 230, 292, 354 — a cada 16% */
+    /* espinha vertical: 60, 120, 180, 240, 300, 360, 420, 480 */
     @keyframes main {
-      0% { transform: translateY(0); opacity: 0; } 3% { opacity: 1; }
-      16% { transform: translateY(62px); } 32% { transform: translateY(124px); }
-      48% { transform: translateY(186px); } 64% { transform: translateY(248px); }
-      80% { transform: translateY(310px); opacity: 1; } 86%, 100% { transform: translateY(310px); opacity: 0; }
+      0% { transform: translateY(0); opacity: 0; } 2% { opacity: 1; }
+      10% { transform: translateY(60px); } 20% { transform: translateY(120px); } 30% { transform: translateY(180px); }
+      40% { transform: translateY(240px); } 50% { transform: translateY(300px); } 60% { transform: translateY(360px); }
+      70% { transform: translateY(420px); opacity: 1; } 76%, 100% { transform: translateY(420px); opacity: 0; }
     }
-    /* ramo: sai da arquitetura (32%) e chega aos testes junto com o eixo (64%) */
-    @keyframes branch {
-      0%, 31.9% { transform: translate(0, 0); opacity: 0; }
-      32% { transform: translate(0, 0); opacity: 1; }
-      36% { transform: translate(86px, 0); }
-      58% { transform: translate(86px, 124px); }
-      64% { transform: translate(-48px, 124px); opacity: 1; }
-      66%, 100% { transform: translate(-48px, 124px); opacity: 0; }
+    /* o ramo sai dos dados, percorre a coluna auxiliar e volta para a validação */
+    @keyframes br {
+      0%, 29.9% { transform: translate(0,0); opacity: 0; } 30% { transform: translate(0,0); opacity: 1; }
+      36% { transform: translate(306px, 15px); } 56% { transform: translate(306px, 225px); }
+      62% { transform: translate(0, 240px); opacity: 1; } 64%, 100% { transform: translate(0, 240px); opacity: 0; }
     }
-    @keyframes n1 { 0%,1%    { opacity: 0; } 2%,93%  { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes n2 { 0%,15.9% { opacity: 0; } 16%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes n3 { 0%,31.9% { opacity: 0; } 32%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes n4 { 0%,47.9% { opacity: 0; } 48%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes n5 { 0%,63.9% { opacity: 0; } 64%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes n6 { 0%,79.9% { opacity: 0; } 80%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes b1 { 0%,42.3% { opacity: 0; } 42.4%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes b2 { 0%,49.0% { opacity: 0; } 49.1%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes b3 { 0%,55.8% { opacity: 0; } 55.9%,93% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes s1 { 0%, 1%  { opacity: .28; } 3%, 92%  { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes s2 { 0%, 9%  { opacity: .28; } 11%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes s3 { 0%, 19% { opacity: .28; } 21%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes s4 { 0%, 29% { opacity: .28; } 31%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes s5 { 0%, 39% { opacity: .28; } 41%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes s6 { 0%, 49% { opacity: .28; } 51%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes s7 { 0%, 59% { opacity: .28; } 61%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes s8 { 0%, 69% { opacity: .28; } 71%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes kbi { 0%, 39% { opacity: .28; } 41%, 92% { opacity: 1; } 100% { opacity: .28; } }
+    @keyframes kia { 0%, 47% { opacity: .28; } 49%, 92% { opacity: 1; } 100% { opacity: .28; } }
 
-    @media (prefers-reduced-motion: reduce) {
-      .anim { animation: none !important; }
-      .moving { display: none; }
-    }
+    @media (prefers-reduced-motion: reduce) { .anim { animation: none !important; } .moving { display: none; } }
   </style>
-  <defs><filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter></defs>
+  <defs><filter id="s4m" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter></defs>
 
-  <rect x="0.5" y="0.5" width="399" height="391" rx="16" fill="#0D1117" stroke="#21262D"/>
+  <rect x="0.5" y="0.5" width="399" height="559" rx="16" fill="#0D1117" stroke="#21262D"/>
 
-  <line x1="40" y1="44" x2="40" y2="354" stroke="#30363D" stroke-width="2"/>
-  <path d="M184 168 H270 V292 H136" fill="none" stroke="#A371F7" stroke-opacity=".55" stroke-width="2" stroke-dasharray="6 6"/>
+  <line x1="46" y1="60" x2="46" y2="480" stroke="#30363D" stroke-width="2"/>
+  <path d="M46 180 V195 H352 V405 H46 V420" fill="none" stroke="#A371F7" stroke-opacity=".4" stroke-width="2" stroke-dasharray="6 6"/>
 
-  <g class="f">
-    <text class="lbl" x="64" y="51">Problema</text>
-    <text class="lbl" x="64" y="113">Regras</text>
-    <text class="lbl" x="64" y="175">Arquitetura</text>
-    <text class="lbl" x="64" y="237">Código</text>
-    <text class="lbl" x="64" y="299">Testes</text>
-    <text class="lbl" x="64" y="361">Produto</text>
-    <text class="blbl" x="286" y="210">Dados</text>
-    <text class="blbl" x="286" y="248">Modelo / IA</text>
-    <text class="blbl" x="286" y="286">Decisão</text>
-    <text class="note" x="196" y="146">quando o problema pede IA</text>
+  <circle class="anim s1" cx="46" cy="60"  r="9" fill="#8B949E"/>
+  <circle class="anim s2" cx="46" cy="120" r="9" fill="#39C5CF"/>
+  <circle class="anim s3" cx="46" cy="180" r="10" fill="#39C5CF"/>
+  <circle class="anim s4" cx="46" cy="240" r="9" fill="#58A6FF"/>
+  <circle class="anim s5" cx="46" cy="300" r="9" fill="#58A6FF"/>
+  <circle class="anim s6" cx="46" cy="360" r="9" fill="#58A6FF"/>
+  <circle class="anim s7" cx="46" cy="420" r="10" fill="#3FB950"/>
+  <circle class="anim s8" cx="46" cy="480" r="9" fill="#F0F6FC"/>
+
+  <g class="f lbl">
+    <text x="70" y="66">problema</text>
+    <text x="70" y="126">operação</text>
+    <text x="70" y="186">dados</text>
+    <text x="70" y="246">regras</text>
+    <text x="70" y="306">arquitetura</text>
+    <text x="70" y="366">implementação</text>
+    <text x="70" y="426">validação</text>
+    <text x="70" y="486">produto</text>
   </g>
 
-  <g fill="#0D1117" stroke="#30363D" stroke-width="2">
-    <circle cx="40" cy="44" r="10"/><circle cx="40" cy="106" r="10"/><circle cx="40" cy="168" r="10"/>
-    <circle cx="40" cy="230" r="10"/><circle cx="40" cy="292" r="10"/><circle cx="40" cy="354" r="10"/>
-    <circle cx="270" cy="204" r="7"/><circle cx="270" cy="242" r="7"/><circle cx="270" cy="280" r="7"/>
-  </g>
-  <circle class="anim n1" cx="40" cy="44"  r="10" fill="#58A6FF"/>
-  <circle class="anim n2" cx="40" cy="106" r="10" fill="#58A6FF"/>
-  <circle class="anim n3" cx="40" cy="168" r="10" fill="#58A6FF"/>
-  <circle class="anim n4" cx="40" cy="230" r="10" fill="#58A6FF"/>
-  <circle class="anim n5" cx="40" cy="292" r="10" fill="#3FB950"/>
-  <circle class="anim n6" cx="40" cy="354" r="10" fill="#F0F6FC"/>
-  <circle class="anim b1" cx="270" cy="204" r="7" fill="#A371F7"/>
-  <circle class="anim b2" cx="270" cy="242" r="7" fill="#A371F7"/>
-  <circle class="anim b3" cx="270" cy="280" r="7" fill="#A371F7"/>
+  <circle class="anim kbi" cx="352" cy="240" r="8" fill="#39C5CF"/>
+  <circle class="anim kia" cx="352" cy="330" r="8" fill="#A371F7"/>
+  <text class="anim kbi f bi" x="336" y="246" text-anchor="end">BI · Analytics</text>
+  <text class="anim kia f ia" x="336" y="336" text-anchor="end">IA · Automação</text>
+
+  <text class="f bi" x="376" y="530" text-anchor="end">os dois ramos voltam para a validação</text>
 
   <g class="moving">
-    <g class="anim main">
-      <circle cx="40" cy="44" r="9" fill="#58A6FF" opacity=".6" filter="url(#glow)"/>
-      <circle cx="40" cy="44" r="4.5" fill="#F0F6FC"/>
-    </g>
-    <g class="anim branch">
-      <circle cx="184" cy="168" r="8" fill="#A371F7" opacity=".6" filter="url(#glow)"/>
-      <circle cx="184" cy="168" r="4" fill="#E2C5FF"/>
-    </g>
+    <g class="anim main"><circle cx="46" cy="60" r="6" fill="#58A6FF" filter="url(#s4m)" opacity=".75"/><circle cx="46" cy="60" r="4" fill="#F0F6FC"/></g>
+    <g class="anim br"><circle cx="46" cy="180" r="5" fill="#A371F7" filter="url(#s4m)" opacity=".75"/><circle cx="46" cy="180" r="3.5" fill="#E2C5FF"/></g>
   </g>
 </svg>

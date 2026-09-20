@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-labelledby="t d">
+  <title id="t">Da operação real à decisão</title>
+  <desc id="d">Sinais soltos da operação se organizam em dados, ganham contexto e viram uma decisão — que então pede dashboard, automação ou sistema.</desc>
+  <style>
+    .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .lbl { font-size: 17px; font-weight: 700; }
+    .out { font-size: 14px; font-weight: 600; fill: #C9D1D9; }
+    .cy { fill: #39C5CF; } .bl { fill: #58A6FF; } .gr { fill: #3FB950; }
+
+    .anim { animation-duration: 14s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(.4,0,.2,1); }
+    .lin { animation-timing-function: linear; }
+    .d1 { animation-name: d1; } .d2 { animation-name: d2; } .d3 { animation-name: d3; } .d4 { animation-name: d4; }
+    .d5 { animation-name: d5; } .d6 { animation-name: d6; } .d7 { animation-name: d7; } .d8 { animation-name: d8; }
+    .pc { animation-name: pc; } .pd { animation-name: pd; }
+    .nc { animation-name: nc; } .nd { animation-name: nd; }
+    .b1 { animation-name: b1; } .b2 { animation-name: b2; } .b3 { animation-name: b3; }
+
+    @keyframes d1 { 0%, 6% { transform: translate(14px, 24px); } 26%, 92% { transform: translate(0,0); } 100% { transform: translate(14px, 24px); } }
+    @keyframes d2 { 0%, 6% { transform: translate(-18px, 10px); } 28%, 92% { transform: translate(0,0); } 100% { transform: translate(-18px, 10px); } }
+    @keyframes d3 { 0%, 6% { transform: translate(20px, -14px); } 30%, 92% { transform: translate(0,0); } 100% { transform: translate(20px, -14px); } }
+    @keyframes d4 { 0%, 6% { transform: translate(-12px, -22px); } 32%, 92% { transform: translate(0,0); } 100% { transform: translate(-12px, -22px); } }
+    @keyframes d5 { 0%, 6% { transform: translate(22px, 15px); } 27%, 92% { transform: translate(0,0); } 100% { transform: translate(22px, 15px); } }
+    @keyframes d6 { 0%, 6% { transform: translate(-21px, -6px); } 29%, 92% { transform: translate(0,0); } 100% { transform: translate(-21px, -6px); } }
+    @keyframes d7 { 0%, 6% { transform: translate(10px, -26px); } 31%, 92% { transform: translate(0,0); } 100% { transform: translate(10px, -26px); } }
+    @keyframes d8 { 0%, 6% { transform: translate(-23px, 21px); } 33%, 92% { transform: translate(0,0); } 100% { transform: translate(-23px, 21px); } }
+
+    @keyframes pc { 0%, 36% { transform: translateY(0); opacity: 0; } 38% { opacity: 1; } 48% { transform: translateY(46px); opacity: 1; } 49%, 100% { transform: translateY(46px); opacity: 0; } }
+    @keyframes pd { 0%, 52% { transform: translateY(0); opacity: 0; } 54% { opacity: 1; } 64% { transform: translateY(58px); opacity: 1; } 65%, 100% { transform: translateY(58px); opacity: 0; } }
+    @keyframes nc { 0%, 47.9% { opacity: .25; } 50%, 92% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes nd { 0%, 63.9% { opacity: .25; } 66%, 92% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes b1 { 0%, 69.9% { opacity: .35; } 72%, 92% { opacity: 1; } 100% { opacity: .35; } }
+    @keyframes b2 { 0%, 72.9% { opacity: .35; } 75%, 92% { opacity: 1; } 100% { opacity: .35; } }
+    @keyframes b3 { 0%, 75.9% { opacity: .35; } 78%, 92% { opacity: 1; } 100% { opacity: .35; } }
+
+    @media (prefers-reduced-motion: reduce) { .anim { animation: none !important; } .moving { display: none; } }
+  </style>
+  <defs><filter id="s2m" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter></defs>
+
+  <rect x="0.5" y="0.5" width="399" height="399" rx="16" fill="#0D1117" stroke="#21262D"/>
+
+  <g fill="#39C5CF">
+    <circle class="anim d1" cx="130" cy="62"  r="5"/><circle class="anim d2" cx="180" cy="62"  r="5"/>
+    <circle class="anim d3" cx="230" cy="62"  r="5"/><circle class="anim d4" cx="280" cy="62"  r="5"/>
+    <circle class="anim d5" cx="130" cy="104" r="5"/><circle class="anim d6" cx="180" cy="104" r="5"/>
+    <circle class="anim d7" cx="230" cy="104" r="5"/><circle class="anim d8" cx="280" cy="104" r="5"/>
+  </g>
+  <text class="f lbl cy" x="200" y="152" text-anchor="middle">operação → dados</text>
+
+  <g stroke="#30363D" stroke-width="2"><path d="M200 168 L200 212"/><path d="M200 236 L200 290"/></g>
+
+  <circle class="anim nc" cx="200" cy="224" r="11" fill="#58A6FF"/>
+  <circle class="anim nd" cx="200" cy="302" r="11" fill="#3FB950"/>
+  <text class="f lbl bl" x="222" y="230">contexto</text>
+  <text class="f lbl gr" x="222" y="308">decisão</text>
+
+  <g stroke="#30363D" stroke-width="2">
+    <path d="M200 313 L90 344"/><path d="M200 313 L200 344"/><path d="M200 313 L310 344"/>
+  </g>
+  <g fill="#8B949E"><circle cx="90" cy="348" r="4"/><circle cx="200" cy="348" r="4"/><circle cx="310" cy="348" r="4"/></g>
+  <g class="f out" text-anchor="middle">
+    <text class="anim b1" x="90"  y="378">dashboard</text>
+    <text class="anim b2" x="200" y="378">automação</text>
+    <text class="anim b3" x="310" y="378">sistema</text>
+  </g>
+
+  <g class="moving">
+    <g class="anim lin pc"><circle cx="200" cy="168" r="5" fill="#58A6FF" filter="url(#s2m)" opacity=".8"/><circle cx="200" cy="168" r="3.5" fill="#EAF2FF"/></g>
+    <g class="anim lin pd"><circle cx="200" cy="236" r="5" fill="#3FB950" filter="url(#s2m)" opacity=".8"/><circle cx="200" cy="236" r="3.5" fill="#EAFBEF"/></g>
+  </g>
+</svg>

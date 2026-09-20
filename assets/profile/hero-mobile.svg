@@ -1,78 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240" role="img" aria-labelledby="t d">
-  <title id="t">Daniel Souza — Software · Product · AI Engineering</title>
-  <desc id="d">Uma informação percorre três portões em sequência: afirmado, verificado e decidido.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 430" width="400" height="430" role="img" aria-labelledby="t d">
+  <title id="t">Daniel Souza — Dados, Business Intelligence e IA aplicada</title>
+  <desc id="d">Sinais de marketplace, CRM e operação convergem para dados, passam por análise e se dividem em decisão, software e produto. A IA aplicada apoia a análise.</desc>
   <style>
     .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-    .name { font-size: 44px; font-weight: 700; fill: #F0F6FC; letter-spacing: -1.1px; }
-    .axes { font-size: 19px; font-weight: 500; fill: #8B949E; }
-    .lbl { font-size: 19px; font-weight: 600; }
-    .a { fill: #D29922; } .v { fill: #3FB950; } .d { fill: #F0F6FC; }
+    .name  { font-size: 31px; font-weight: 700; fill: #F0F6FC; letter-spacing: -.6px; }
+    .axis  { font-size: 16px; font-weight: 600; fill: #C9D1D9; }
+    .axis2 { font-size: 14px; font-weight: 500; fill: #8B949E; }
+    .msg   { font-size: 16px; font-weight: 500; fill: #C9D1D9; }
+    .src   { font-size: 14px; fill: #8B949E; }
+    .node  { font-size: 17px; font-weight: 700; }
+    .out   { font-size: 15px; font-weight: 600; }
+    .ia    { font-size: 14px; font-weight: 600; fill: #BC8CFF; }
+    .cy { fill: #39C5CF; } .bl { fill: #58A6FF; } .gr { fill: #3FB950; } .wh { fill: #F0F6FC; }
 
-    .anim { animation-duration: 9s; animation-iteration-count: infinite; animation-timing-function: linear; }
-    .ping { transform-box: fill-box; transform-origin: center; }
-    .pulse { animation-name: travel; } .pcolor { animation-name: tint; }
-    .s0 { animation-name: s0; } .s1 { animation-name: s1; } .s2 { animation-name: s2; } .s3 { animation-name: s3; }
-    .gA { animation-name: gA; } .gV { animation-name: gV; } .gD { animation-name: gD; }
-    .pA { animation-name: pA; } .pV { animation-name: pV; } .pD { animation-name: pD; }
+    .anim { animation-duration: 12s; animation-iteration-count: infinite; animation-timing-function: linear; }
+    .amb { animation: drift 22s ease-in-out infinite; }
+    @keyframes drift { 0%, 100% { transform: translate(0,0); } 50% { transform: translate(-10px, 8px); } }
+    .p1 { animation-name: p1; } .p2 { animation-name: p2; } .p3 { animation-name: p3; }
+    .p4 { animation-name: p4; } .p5 { animation-name: p5; } .p6 { animation-name: p6; } .p7 { animation-name: p7; }
+    .pi { animation-name: pi; }
+    .nD { animation-name: nD; } .nA { animation-name: nA; } .nI { animation-name: nI; }
+    .o1 { animation-name: o1; } .o2 { animation-name: o2; } .o3 { animation-name: o3; }
 
-    @keyframes travel {
-      0% { transform: translateX(0); opacity: 0; } 3% { opacity: 1; }
-      18% { transform: translateX(56px); } 26% { transform: translateX(56px); }
-      42% { transform: translateX(176px); } 50% { transform: translateX(176px); }
-      66% { transform: translateX(296px); } 74% { transform: translateX(296px); }
-      88% { transform: translateX(352px); opacity: 1; } 92%, 100% { transform: translateX(352px); opacity: 0; }
-    }
-    @keyframes tint { 0%, 17.9% { fill: #8B949E; } 18%, 41.9% { fill: #D29922; } 42%, 65.9% { fill: #3FB950; } 66%, 100% { fill: #F0F6FC; } }
-    @keyframes s0 { 0%,3% { stroke-dashoffset: 56; } 18%,93% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
-    @keyframes s1 { 0%,26% { stroke-dashoffset: 120; } 42%,93% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
-    @keyframes s2 { 0%,50% { stroke-dashoffset: 120; } 66%,93% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
-    @keyframes s3 { 0%,74% { stroke-dashoffset: 56; } 88%,93% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
-    @keyframes gA { 0%,17.9% { opacity: 0; } 18%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes gV { 0%,41.9% { opacity: 0; } 42%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes gD { 0%,65.9% { opacity: 0; } 66%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes pA { 0%,17.9% { opacity: 0; transform: scale(1); } 18% { opacity: .9; transform: scale(1); } 26%,100% { opacity: 0; transform: scale(2.4); } }
-    @keyframes pV { 0%,41.9% { opacity: 0; transform: scale(1); } 42% { opacity: .9; transform: scale(1); } 50%,100% { opacity: 0; transform: scale(2.4); } }
-    @keyframes pD { 0%,65.9% { opacity: 0; transform: scale(1); } 66% { opacity: .9; transform: scale(1); } 74%,100% { opacity: 0; transform: scale(2.4); } }
+    /* fontes (70/200/330, y=236) -> DADOS (200,286) */
+    @keyframes p1 { 0% { transform: translate(0,0); opacity: 0; } 2% { opacity: 1; } 16% { transform: translate(130px, 50px); opacity: 1; } 17%, 100% { transform: translate(130px, 50px); opacity: 0; } }
+    @keyframes p2 { 0%, 4% { transform: translate(0,0); opacity: 0; } 6% { opacity: 1; } 20% { transform: translate(0, 50px); opacity: 1; } 21%, 100% { transform: translate(0, 50px); opacity: 0; } }
+    @keyframes p3 { 0%, 8% { transform: translate(0,0); opacity: 0; } 10% { opacity: 1; } 24% { transform: translate(-130px, 50px); opacity: 1; } 25%, 100% { transform: translate(-130px, 50px); opacity: 0; } }
+    /* DADOS -> ANÁLISE (200,336) */
+    @keyframes p4 { 0%, 27% { transform: translateY(0); opacity: 0; } 29% { opacity: 1; } 40% { transform: translateY(50px); opacity: 1; } 41%, 100% { transform: translateY(50px); opacity: 0; } }
+    /* ANÁLISE -> saídas (70/200/330, y=392) */
+    @keyframes p5 { 0%, 45% { transform: translate(0,0); opacity: 0; } 47% { opacity: 1; } 58% { transform: translate(-130px, 56px); opacity: 1; } 59%, 100% { transform: translate(-130px, 56px); opacity: 0; } }
+    @keyframes p6 { 0%, 48% { transform: translate(0,0); opacity: 0; } 50% { opacity: 1; } 61% { transform: translate(0, 56px); opacity: 1; } 62%, 100% { transform: translate(0, 56px); opacity: 0; } }
+    @keyframes p7 { 0%, 51% { transform: translate(0,0); opacity: 0; } 53% { opacity: 1; } 64% { transform: translate(130px, 56px); opacity: 1; } 65%, 100% { transform: translate(130px, 56px); opacity: 0; } }
+    @keyframes pi { 0%, 41% { transform: translate(0,0); opacity: 0; } 43% { opacity: 1; } 50% { transform: translate(110px, 0); opacity: 1; } 51%, 100% { transform: translate(110px, 0); opacity: 0; } }
 
-    @media (prefers-reduced-motion: reduce) {
-      .anim { animation: none !important; }
-      .moving, .ring-ping { display: none; }
-    }
+    @keyframes nD { 0%, 15.9% { opacity: .25; } 18%, 92% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes nA { 0%, 39.9% { opacity: .25; } 42%, 92% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes nI { 0%, 49.9% { opacity: .25; } 52%, 92% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes o1 { 0%, 57.9% { opacity: .25; } 60%, 92% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes o2 { 0%, 60.9% { opacity: .25; } 63%, 92% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes o3 { 0%, 63.9% { opacity: .25; } 66%, 92% { opacity: 1; } 100% { opacity: .25; } }
+
+    @media (prefers-reduced-motion: reduce) { .anim, .amb { animation: none !important; } .moving { display: none; } }
   </style>
-  <defs><filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter></defs>
+  <defs>
+    <filter id="auroraM" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="34" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="softM" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter>
+    <clipPath id="panelM"><rect x="0" y="0" width="400" height="430" rx="16"/></clipPath>
+  </defs>
 
-  <rect x="0.5" y="0.5" width="399" height="239" rx="16" fill="#0D1117" stroke="#21262D"/>
-  <text class="f name" x="24" y="72">Daniel Souza</text>
-  <text class="f axes" x="25" y="104">Software · Product · AI Engineering</text>
-
-  <line x1="24" y1="164" x2="376" y2="164" stroke="#21262D" stroke-width="2"/>
-  <line class="anim s0" x1="24"  y1="164" x2="80"  y2="164" stroke="#8B949E" stroke-opacity=".55" stroke-width="2" stroke-dasharray="56"/>
-  <line class="anim s1" x1="80"  y1="164" x2="200" y2="164" stroke="#D29922" stroke-width="2" stroke-dasharray="120"/>
-  <line class="anim s2" x1="200" y1="164" x2="320" y2="164" stroke="#3FB950" stroke-width="2" stroke-dasharray="120"/>
-  <line class="anim s3" x1="320" y1="164" x2="376" y2="164" stroke="#F0F6FC" stroke-opacity=".85" stroke-width="2" stroke-dasharray="56"/>
-
-  <g fill="#0D1117" stroke="#30363D" stroke-width="2">
-    <circle cx="80" cy="164" r="10"/><circle cx="200" cy="164" r="10"/><circle cx="320" cy="164" r="10"/>
-  </g>
-  <circle class="anim gA" cx="80"  cy="164" r="10" fill="#0D1117" stroke="#D29922" stroke-width="3"/>
-  <circle class="anim gV" cx="200" cy="164" r="10" fill="#3FB950"/>
-  <circle class="anim gD" cx="320" cy="164" r="10" fill="#F0F6FC"/>
-  <g class="ring-ping" fill="none" stroke-width="2">
-    <circle class="anim pA ping" cx="80"  cy="164" r="10" stroke="#D29922"/>
-    <circle class="anim pV ping" cx="200" cy="164" r="10" stroke="#3FB950"/>
-    <circle class="anim pD ping" cx="320" cy="164" r="10" stroke="#F0F6FC"/>
+  <rect x="0.5" y="0.5" width="399" height="429" rx="16" fill="#0D1117" stroke="#21262D"/>
+  <g clip-path="url(#panelM)">
+    <g class="amb" opacity=".16" filter="url(#auroraM)">
+      <ellipse cx="120" cy="330" rx="150" ry="90" fill="#58A6FF"/>
+      <ellipse cx="300" cy="300" rx="130" ry="80" fill="#A371F7"/>
+      <ellipse cx="210" cy="400" rx="150" ry="70" fill="#39C5CF"/>
+    </g>
   </g>
 
-  <g class="f" text-anchor="middle">
-    <text class="lbl a" x="80"  y="206">afirmado</text>
-    <text class="lbl v" x="200" y="206">verificado</text>
-    <text class="lbl d" x="320" y="206">decidido</text>
+  <g class="f">
+    <text class="name" x="24" y="56">DANIEL SOUZA</text>
+    <text class="axis" x="25" y="82">Dados · Business Intelligence · IA aplicada</text>
+    <text class="axis2" x="25" y="104">Analytics · Software · Produto</text>
+    <text class="msg" x="25" y="140">Transformo dados de operação em</text>
+    <text class="msg" x="25" y="162">decisões, sistemas e produtos.</text>
+  </g>
+
+  <g stroke="#30363D" stroke-width="2" fill="none">
+    <path d="M70 236 L200 286"/><path d="M200 236 L200 286"/><path d="M330 236 L200 286"/>
+    <path d="M200 286 L200 336"/>
+    <path d="M200 336 L70 392"/><path d="M200 336 L200 392"/><path d="M200 336 L330 392"/>
+  </g>
+  <path d="M200 336 L310 336" stroke="#A371F7" stroke-opacity=".5" stroke-width="2" stroke-dasharray="5 5" fill="none"/>
+
+  <g class="f src" text-anchor="middle">
+    <text x="70" y="212">marketplace</text>
+    <text x="200" y="212">CRM</text>
+    <text x="330" y="212">operação</text>
+  </g>
+  <g fill="#8B949E"><circle cx="70" cy="236" r="4.5"/><circle cx="200" cy="236" r="4.5"/><circle cx="330" cy="236" r="4.5"/></g>
+
+  <circle class="anim nD" cx="200" cy="286" r="11" fill="#39C5CF"/>
+  <circle class="anim nA" cx="200" cy="336" r="11" fill="#58A6FF"/>
+  <circle class="anim nI" cx="310" cy="336" r="9" fill="#A371F7"/>
+  <circle class="anim o1" cx="70"  cy="392" r="10" fill="#3FB950"/>
+  <circle class="anim o2" cx="200" cy="392" r="10" fill="#58A6FF"/>
+  <circle class="anim o3" cx="330" cy="392" r="10" fill="#F0F6FC"/>
+
+  <text class="f node cy" x="218" y="292">DADOS</text>
+  <text class="f node bl" x="122" y="342" text-anchor="end">ANÁLISE</text>
+  <text class="f ia" x="310" y="314" text-anchor="middle">IA aplicada</text>
+  <g class="f out" text-anchor="middle">
+    <text class="gr" x="70"  y="420">decisão</text>
+    <text class="bl" x="200" y="420">software</text>
+    <text class="wh" x="330" y="420">produto</text>
   </g>
 
   <g class="moving">
-    <g class="anim pulse">
-      <circle class="anim pcolor" cx="24" cy="164" r="8" filter="url(#glow)" opacity=".7"/>
-      <circle class="anim pcolor" cx="24" cy="164" r="4.5"/>
-    </g>
+    <g class="anim p1"><circle cx="70" cy="236" r="4.5" fill="#39C5CF" filter="url(#softM)" opacity=".8"/><circle cx="70" cy="236" r="3" fill="#D2FAFF"/></g>
+    <g class="anim p2"><circle cx="200" cy="236" r="4.5" fill="#39C5CF" filter="url(#softM)" opacity=".8"/><circle cx="200" cy="236" r="3" fill="#D2FAFF"/></g>
+    <g class="anim p3"><circle cx="330" cy="236" r="4.5" fill="#39C5CF" filter="url(#softM)" opacity=".8"/><circle cx="330" cy="236" r="3" fill="#D2FAFF"/></g>
+    <g class="anim p4"><circle cx="200" cy="286" r="5" fill="#58A6FF" filter="url(#softM)" opacity=".8"/><circle cx="200" cy="286" r="3.5" fill="#F0F6FC"/></g>
+    <g class="anim p5"><circle cx="200" cy="336" r="4.5" fill="#3FB950" filter="url(#softM)" opacity=".8"/><circle cx="200" cy="336" r="3" fill="#EAFBEF"/></g>
+    <g class="anim p6"><circle cx="200" cy="336" r="4.5" fill="#58A6FF" filter="url(#softM)" opacity=".8"/><circle cx="200" cy="336" r="3" fill="#EAF2FF"/></g>
+    <g class="anim p7"><circle cx="200" cy="336" r="4.5" fill="#F0F6FC" filter="url(#softM)" opacity=".8"/><circle cx="200" cy="336" r="3" fill="#FFFFFF"/></g>
+    <g class="anim pi"><circle cx="200" cy="336" r="4.5" fill="#A371F7" filter="url(#softM)" opacity=".8"/><circle cx="200" cy="336" r="3" fill="#E2C5FF"/></g>
   </g>
 </svg>

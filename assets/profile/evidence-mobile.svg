@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="400" height="480" role="img" aria-labelledby="t d">
+  <title id="t">Engenharia que eu consigo provar</title>
+  <desc id="d">Pulse: 656 testes, 655 passam e 1 é pulado, documentado. Event Operations OS: 1.137 de 1.137 unitários, 649 de 649 verificações de migrations, 50 de 50 de integração, 25 de 25 de aceitação e concorrência aprovada.</desc>
+  <style>
+    .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .ttl { font-size: 18px; font-weight: 700; fill: #F0F6FC; }
+    .row { font-size: 16px; fill: #C9D1D9; }
+    .dim { font-size: 13px; fill: #8B949E; }
+
+    .anim { animation-duration: 18s; animation-iteration-count: infinite; animation-timing-function: linear; }
+    .scanA { animation-name: scanA; } .scanB { animation-name: scanB; }
+    .okA { animation-name: okA; } .okB { animation-name: okB; }
+    @keyframes scanA { 0% { transform: translateY(0); opacity: 0; } 3% { opacity: .9; } 26% { transform: translateY(158px); opacity: .9; } 30%, 100% { transform: translateY(158px); opacity: 0; } }
+    @keyframes scanB { 0%, 34% { transform: translateY(0); opacity: 0; } 37% { opacity: .9; } 60% { transform: translateY(186px); opacity: .9; } 64%, 100% { transform: translateY(186px); opacity: 0; } }
+    @keyframes okA { 0%, 27% { stroke-dashoffset: 30; opacity: 0; } 29% { opacity: 1; } 34%, 94% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 30; opacity: 0; } }
+    @keyframes okB { 0%, 61% { stroke-dashoffset: 30; opacity: 0; } 63% { opacity: 1; } 68%, 94% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 30; opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .anim { animation: none !important; } .moving { display: none; } }
+  </style>
+  <defs>
+    <linearGradient id="beamM" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3FB950" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#3FB950" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#3FB950" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="cA"><rect x="24" y="30" width="352" height="186" rx="14"/></clipPath>
+    <clipPath id="cB"><rect x="24" y="240" width="352" height="214" rx="14"/></clipPath>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="399" height="479" rx="16" fill="#0D1117" stroke="#21262D"/>
+
+  <rect x="24" y="30" width="352" height="186" rx="14" fill="#161B22" stroke="#21262D"/>
+  <text class="f ttl" x="48" y="66">Pulse</text>
+  <g class="f row">
+    <text x="48" y="104">656 testes</text>
+    <text x="48" y="132">655 passam</text>
+    <text x="48" y="160">1 pulado, documentado</text>
+  </g>
+  <text class="f dim" x="48" y="192">dados 100% sintéticos</text>
+  <g clip-path="url(#cA)" class="moving"><rect class="anim scanA" x="24" y="34" width="352" height="24" fill="url(#beamM)" opacity="0"/></g>
+  <path class="anim okA" d="M330 182 l8 8 l15 -17" fill="none" stroke="#3FB950" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="30" opacity="0"/>
+
+  <rect x="24" y="240" width="352" height="214" rx="14" fill="#161B22" stroke="#21262D"/>
+  <text class="f ttl" x="48" y="276">Event Operations OS</text>
+  <g class="f row">
+    <text x="48" y="312">1.137 / 1.137 unitários</text>
+    <text x="48" y="340">649 / 649 migrations</text>
+    <text x="48" y="368">50 / 50 integração</text>
+    <text x="48" y="396">25 / 25 aceitação</text>
+  </g>
+  <text class="f dim" x="48" y="428">concorrência: aprovado</text>
+  <g clip-path="url(#cB)" class="moving"><rect class="anim scanB" x="24" y="244" width="352" height="24" fill="url(#beamM)" opacity="0"/></g>
+  <path class="anim okB" d="M330 420 l8 8 l15 -17" fill="none" stroke="#3FB950" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="30" opacity="0"/>
+</svg>

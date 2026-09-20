@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 380" width="840" height="380" role="img" aria-labelledby="t d">
+  <title id="t">A ferramenta é consequência do problema</title>
+  <desc id="d">Um mesmo sinal sai do problema e passa por um cluster diferente conforme o caso: Dados e BI, Engenharia, ou IA aplicada.</desc>
+  <style>
+    .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .ttl { font-size: 17px; font-weight: 700; }
+    .chip { font-size: 14px; font-weight: 500; fill: #C9D1D9; }
+    .prob { font-size: 16px; font-weight: 600; fill: #C9D1D9; }
+
+    /* 15s: o sinal visita um cluster de cada vez. */
+    .anim { animation-duration: 15s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(.4,0,.2,1); }
+    .sig { animation-name: sig; animation-timing-function: linear; }
+    .ca { animation-name: ca; } .cb { animation-name: cb; } .cc { animation-name: cc; }
+
+    @keyframes sig {
+      0% { transform: translate(0,0); opacity: 0; } 4% { opacity: 1; }
+      12% { transform: translate(100px,-115px); } 28% { transform: translate(100px,-115px); }
+      36% { transform: translate(100px,0); } 52% { transform: translate(100px,0); }
+      60% { transform: translate(100px,115px); } 76% { transform: translate(100px,115px); opacity: 1; }
+      80%, 100% { transform: translate(100px,115px); opacity: 0; }
+    }
+    @keyframes ca { 0%, 10% { opacity: .5; } 14%, 29% { opacity: 1; } 33%, 100% { opacity: .5; } }
+    @keyframes cb { 0%, 34% { opacity: .5; } 38%, 53% { opacity: 1; } 57%, 100% { opacity: .5; } }
+    @keyframes cc { 0%, 58% { opacity: .5; } 62%, 77% { opacity: 1; } 81%, 100% { opacity: .5; } }
+
+    @media (prefers-reduced-motion: reduce) { .anim { animation: none !important; } .moving { display: none; } }
+  </style>
+  <defs><filter id="s7f" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter></defs>
+
+  <rect x="0.5" y="0.5" width="839" height="379" rx="20" fill="#0D1117" stroke="#21262D"/>
+
+  <g stroke="#30363D" stroke-width="2" fill="none">
+    <path d="M70 190 L120 190 L120 75 L170 75"/>
+    <path d="M120 190 L170 190"/>
+    <path d="M120 190 L120 305 L170 305"/>
+  </g>
+  <circle cx="70" cy="190" r="10" fill="#8B949E"/>
+  <text class="f prob" x="70" y="162" text-anchor="middle">problema</text>
+
+  <!-- Dados &amp; BI -->
+  <g class="anim ca">
+    <rect x="170" y="30" width="640" height="90" rx="14" fill="#161B22" stroke="#21262D"/>
+    <text class="f ttl" x="192" y="82" fill="#39C5CF">Dados &amp; BI</text>
+    <g fill="#0D1117" stroke="#30363D">
+      <rect x="330" y="60" width="62" height="30" rx="8"/><rect x="402" y="60" width="92" height="30" rx="8"/>
+      <rect x="504" y="60" width="76" height="30" rx="8"/><rect x="590" y="60" width="78" height="30" rx="8"/>
+      <rect x="678" y="60" width="82" height="30" rx="8"/>
+    </g>
+    <g class="f chip" text-anchor="middle">
+      <text x="361" y="80">SQL</text><text x="448" y="80">Power BI</text><text x="542" y="80">Python</text>
+      <text x="629" y="80">pandas</text><text x="719" y="80">DuckDB</text>
+    </g>
+  </g>
+
+  <!-- Engenharia -->
+  <g class="anim cb">
+    <rect x="170" y="145" width="640" height="90" rx="14" fill="#161B22" stroke="#21262D"/>
+    <text class="f ttl" x="192" y="197" fill="#58A6FF">Engenharia</text>
+    <g fill="#0D1117" stroke="#30363D">
+      <rect x="330" y="175" width="94" height="30" rx="8"/><rect x="434" y="175" width="62" height="30" rx="8"/>
+      <rect x="506" y="175" width="74" height="30" rx="8"/><rect x="590" y="175" width="100" height="30" rx="8"/>
+      <rect x="700" y="175" width="88" height="30" rx="8"/>
+    </g>
+    <g class="f chip" text-anchor="middle">
+      <text x="377" y="195">TypeScript</text><text x="465" y="195">React</text><text x="543" y="195">Next.js</text>
+      <text x="640" y="195">PostgreSQL</text><text x="744" y="195">Supabase</text>
+    </g>
+  </g>
+
+  <!-- IA aplicada -->
+  <g class="anim cc">
+    <rect x="170" y="260" width="640" height="90" rx="14" fill="#161B22" stroke="#21262D"/>
+    <text class="f ttl" x="192" y="312" fill="#BC8CFF">IA aplicada</text>
+    <g fill="#0D1117" stroke="#30363D">
+      <rect x="330" y="290" width="62" height="30" rx="8"/><rect x="402" y="290" width="126" height="30" rx="8"/>
+      <rect x="538" y="290" width="86" height="30" rx="8"/><rect x="634" y="290" width="154" height="30" rx="8"/>
+    </g>
+    <g class="f chip" text-anchor="middle">
+      <text x="361" y="310">LLMs</text><text x="465" y="310">Anthropic SDK</text>
+      <text x="581" y="310">workflows</text><text x="711" y="310">validação de saída</text>
+    </g>
+  </g>
+
+  <g class="moving">
+    <g class="anim sig">
+      <circle cx="70" cy="190" r="6" fill="#58A6FF" filter="url(#s7f)" opacity=".8"/>
+      <circle cx="70" cy="190" r="4" fill="#F0F6FC"/>
+    </g>
+  </g>
+</svg>

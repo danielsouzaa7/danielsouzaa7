@@ -1,112 +1,129 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" role="img" aria-labelledby="t d">
-  <title id="t">Daniel Souza — Software · Product · AI Engineering</title>
-  <desc id="d">Uma informação percorre três portões em sequência: afirmado, verificado e decidido. Ela só avança de estado quando passa por cada portão.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 480" width="840" height="480" role="img" aria-labelledby="t d">
+  <title id="t">Daniel Souza — Dados, Business Intelligence e IA aplicada</title>
+  <desc id="d">Sinais de marketplace, CRM e operação convergem para dados, passam por análise e se dividem em decisão, software e produto. A IA aplicada entra como camada de apoio da análise.</desc>
   <style>
     .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-    .name { font-size: 54px; font-weight: 700; fill: #F0F6FC; letter-spacing: -1.4px; }
-    .axes { font-size: 24px; font-weight: 500; fill: #8B949E; letter-spacing: .2px; }
-    .lbl { font-size: 23px; font-weight: 600; }
-    .a { fill: #D29922; } .v { fill: #3FB950; } .d { fill: #F0F6FC; }
+    .name  { font-size: 46px; font-weight: 700; fill: #F0F6FC; letter-spacing: -1px; }
+    .axis  { font-size: 21px; font-weight: 600; fill: #C9D1D9; letter-spacing: .3px; }
+    .axis2 { font-size: 17px; font-weight: 500; fill: #8B949E; letter-spacing: .3px; }
+    .msg   { font-size: 21px; font-weight: 500; fill: #C9D1D9; }
+    .src   { font-size: 17px; fill: #8B949E; }
+    .node  { font-size: 19px; font-weight: 600; }
+    .out   { font-size: 18px; font-weight: 600; }
+    .ia    { font-size: 17px; font-weight: 600; fill: #BC8CFF; }
+    .cy { fill: #39C5CF; } .bl { fill: #58A6FF; } .gr { fill: #3FB950; } .wh { fill: #F0F6FC; }
 
-    /* Estado final completo = versão estática (reduced motion). A animação só conta a ordem. */
-    .anim { animation-duration: 9s; animation-iteration-count: infinite; animation-timing-function: linear; }
-    .ping { transform-box: fill-box; transform-origin: center; }
+    /* Motion: ciclo de sinal de 12s; a aurora do fundo respira em 22s. */
+    .anim { animation-duration: 12s; animation-iteration-count: infinite; animation-timing-function: linear; }
+    .amb  { animation: drift 22s ease-in-out infinite; }
+    @keyframes drift { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-16px, 10px); } }
 
-    .pulse  { animation-name: travel; }
-    .pcolor { animation-name: tint; }
-    .s0 { animation-name: s0; } .s1 { animation-name: s1; } .s2 { animation-name: s2; } .s3 { animation-name: s3; }
-    .gA { animation-name: gA; } .gV { animation-name: gV; } .gD { animation-name: gD; }
-    .pA { animation-name: pA; } .pV { animation-name: pV; } .pD { animation-name: pD; }
+    .p1 { animation-name: p1; } .p2 { animation-name: p2; } .p3 { animation-name: p3; }
+    .p4 { animation-name: p4; } .p5 { animation-name: p5; } .p6 { animation-name: p6; } .p7 { animation-name: p7; }
+    .pi { animation-name: pi; }
+    .nD { animation-name: nD; } .nA { animation-name: nA; } .nI { animation-name: nI; }
+    .o1 { animation-name: o1; } .o2 { animation-name: o2; } .o3 { animation-name: o3; }
 
-    @keyframes travel {
-      0%   { transform: translateX(0);     opacity: 0; }
-      3%   { opacity: 1; }
-      18%  { transform: translateX(160px); }
-      26%  { transform: translateX(160px); }
-      42%  { transform: translateX(340px); }
-      50%  { transform: translateX(340px); }
-      66%  { transform: translateX(520px); }
-      74%  { transform: translateX(520px); }
-      88%  { transform: translateX(680px); opacity: 1; }
-      92%, 100% { transform: translateX(680px); opacity: 0; }
-    }
-    @keyframes tint {
-      0%, 17.9%  { fill: #8B949E; }
-      18%, 41.9% { fill: #D29922; }
-      42%, 65.9% { fill: #3FB950; }
-      66%, 100%  { fill: #F0F6FC; }
-    }
-    /* trilho: cada trecho herda a cor do último portão atravessado */
-    @keyframes s0 { 0%,3% { stroke-dashoffset: 160; } 18%,93% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
-    @keyframes s1 { 0%,26% { stroke-dashoffset: 180; } 42%,93% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
-    @keyframes s2 { 0%,50% { stroke-dashoffset: 180; } 66%,93% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
-    @keyframes s3 { 0%,74% { stroke-dashoffset: 160; } 88%,93% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
+    /* fontes -> DADOS (310,330) */
+    @keyframes p1 { 0% { transform: translate(0,0); opacity: 0; } 2% { opacity: 1; } 16% { transform: translate(110px, 50px); opacity: 1; } 17%, 100% { transform: translate(110px, 50px); opacity: 0; } }
+    @keyframes p2 { 0%, 4% { transform: translate(0,0); opacity: 0; } 6% { opacity: 1; } 20% { transform: translate(110px, 0); opacity: 1; } 21%, 100% { transform: translate(110px, 0); opacity: 0; } }
+    @keyframes p3 { 0%, 8% { transform: translate(0,0); opacity: 0; } 10% { opacity: 1; } 24% { transform: translate(110px, -50px); opacity: 1; } 25%, 100% { transform: translate(110px, -50px); opacity: 0; } }
+    /* DADOS -> ANÁLISE (450,330) */
+    @keyframes p4 { 0%, 27% { transform: translateX(0); opacity: 0; } 29% { opacity: 1; } 40% { transform: translateX(140px); opacity: 1; } 41%, 100% { transform: translateX(140px); opacity: 0; } }
+    /* ANÁLISE -> saídas (620, 260 / 330 / 400) */
+    @keyframes p5 { 0%, 45% { transform: translate(0,0); opacity: 0; } 47% { opacity: 1; } 58% { transform: translate(170px, -70px); opacity: 1; } 59%, 100% { transform: translate(170px, -70px); opacity: 0; } }
+    @keyframes p6 { 0%, 48% { transform: translate(0,0); opacity: 0; } 50% { opacity: 1; } 61% { transform: translate(170px, 0); opacity: 1; } 62%, 100% { transform: translate(170px, 0); opacity: 0; } }
+    @keyframes p7 { 0%, 51% { transform: translate(0,0); opacity: 0; } 53% { opacity: 1; } 64% { transform: translate(170px, 70px); opacity: 1; } 65%, 100% { transform: translate(170px, 70px); opacity: 0; } }
+    /* ANÁLISE -> IA aplicada: apoio, não decisão */
+    @keyframes pi { 0%, 41% { transform: translate(0,0); opacity: 0; } 43% { opacity: 1; } 50% { transform: translate(0, 86px); opacity: 1; } 51%, 100% { transform: translate(0, 86px); opacity: 0; } }
 
-    @keyframes gA { 0%,17.9% { opacity: 0; } 18%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes gV { 0%,41.9% { opacity: 0; } 42%,93% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes gD { 0%,65.9% { opacity: 0; } 66%,93% { opacity: 1; } 100% { opacity: 0; } }
-
-    @keyframes pA { 0%,17.9% { opacity: 0; transform: scale(1); } 18% { opacity: .9; transform: scale(1); } 26%,100% { opacity: 0; transform: scale(2.6); } }
-    @keyframes pV { 0%,41.9% { opacity: 0; transform: scale(1); } 42% { opacity: .9; transform: scale(1); } 50%,100% { opacity: 0; transform: scale(2.6); } }
-    @keyframes pD { 0%,65.9% { opacity: 0; transform: scale(1); } 66% { opacity: .9; transform: scale(1); } 74%,100% { opacity: 0; transform: scale(2.6); } }
+    @keyframes nD { 0%, 15.9% { opacity: .25; } 18%, 92% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes nA { 0%, 39.9% { opacity: .25; } 42%, 92% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes nI { 0%, 49.9% { opacity: .25; } 52%, 92% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes o1 { 0%, 57.9% { opacity: .25; } 60%, 92% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes o2 { 0%, 60.9% { opacity: .25; } 63%, 92% { opacity: 1; } 100% { opacity: .25; } }
+    @keyframes o3 { 0%, 63.9% { opacity: .25; } 66%, 92% { opacity: 1; } 100% { opacity: .25; } }
 
     @media (prefers-reduced-motion: reduce) {
-      .anim { animation: none !important; }
-      .moving, .ring-ping { display: none; }
+      .anim, .amb { animation: none !important; }
+      .moving { display: none; }
     }
   </style>
 
   <defs>
-    <filter id="glow" x="-200%" y="-200%" width="500%" height="500%">
-      <feGaussianBlur stdDeviation="5"/>
+    <filter id="aurora" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="46" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="16"/>
     </filter>
+    <filter id="soft" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="5"/></filter>
+    <clipPath id="panel"><rect x="0" y="0" width="840" height="480" rx="20"/></clipPath>
   </defs>
 
-  <rect x="0.5" y="0.5" width="759" height="299" rx="18" fill="#0D1117" stroke="#21262D"/>
+  <rect x="0.5" y="0.5" width="839" height="479" rx="20" fill="#0D1117" stroke="#21262D"/>
+
+  <!-- aurora: textura quase imperceptível, sem competir com o texto -->
+  <g clip-path="url(#panel)">
+    <g class="amb" opacity=".16" filter="url(#aurora)">
+      <ellipse cx="250" cy="390" rx="230" ry="120" fill="#58A6FF"/>
+      <ellipse cx="620" cy="300" rx="200" ry="110" fill="#A371F7"/>
+      <ellipse cx="430" cy="450" rx="220" ry="90" fill="#39C5CF"/>
+    </g>
+  </g>
 
   <g class="f">
-    <text class="name" x="40" y="96">Daniel Souza</text>
-    <text class="axes" x="42" y="136">Software · Product · AI Engineering</text>
+    <text class="name" x="44" y="86">DANIEL SOUZA</text>
+    <text class="axis" x="46" y="124">Dados · Business Intelligence · IA aplicada</text>
+    <text class="axis2" x="46" y="152">Analytics · Software · Produto</text>
+    <text class="msg" x="46" y="202">Transformo dados de operação em decisões, sistemas e produtos.</text>
   </g>
 
-  <!-- trilho base -->
-  <line x1="40" y1="212" x2="720" y2="212" stroke="#21262D" stroke-width="2"/>
+  <!-- ligações -->
+  <g stroke="#30363D" stroke-width="2" fill="none">
+    <path d="M200 280 L310 330"/><path d="M200 330 L310 330"/><path d="M200 380 L310 330"/>
+    <path d="M310 330 L450 330"/>
+    <path d="M450 330 L620 260"/><path d="M450 330 L620 330"/><path d="M450 330 L620 400"/>
+  </g>
+  <path d="M450 330 L450 416" stroke="#A371F7" stroke-opacity=".5" stroke-width="2" stroke-dasharray="5 5" fill="none"/>
 
-  <!-- trilho percorrido, por estado -->
-  <line class="anim s0" x1="40"  y1="212" x2="200" y2="212" stroke="#8B949E" stroke-opacity=".55" stroke-width="2" stroke-dasharray="160"/>
-  <line class="anim s1" x1="200" y1="212" x2="380" y2="212" stroke="#D29922" stroke-width="2" stroke-dasharray="180"/>
-  <line class="anim s2" x1="380" y1="212" x2="560" y2="212" stroke="#3FB950" stroke-width="2" stroke-dasharray="180"/>
-  <line class="anim s3" x1="560" y1="212" x2="720" y2="212" stroke="#F0F6FC" stroke-opacity=".85" stroke-width="2" stroke-dasharray="160"/>
-
-  <!-- portões: base apagada -->
-  <g fill="#0D1117" stroke="#30363D" stroke-width="2">
-    <circle cx="200" cy="212" r="11"/>
-    <circle cx="380" cy="212" r="11"/>
-    <circle cx="560" cy="212" r="11"/>
+  <!-- fontes -->
+  <g class="f src" text-anchor="end">
+    <text x="182" y="286">marketplace</text>
+    <text x="182" y="336">CRM</text>
+    <text x="182" y="386">operação</text>
+  </g>
+  <g fill="#8B949E">
+    <circle cx="200" cy="280" r="5"/><circle cx="200" cy="330" r="5"/><circle cx="200" cy="380" r="5"/>
   </g>
 
-  <!-- portões: estado aceso. afirmado é só contorno (alegação); verificado e decidido são cheios -->
-  <circle class="anim gA" cx="200" cy="212" r="11" fill="#0D1117" stroke="#D29922" stroke-width="3"/>
-  <circle class="anim gV" cx="380" cy="212" r="11" fill="#3FB950"/>
-  <circle class="anim gD" cx="560" cy="212" r="11" fill="#F0F6FC"/>
-
-  <g class="ring-ping" fill="none" stroke-width="2">
-    <circle class="anim pA ping" cx="200" cy="212" r="11" stroke="#D29922"/>
-    <circle class="anim pV ping" cx="380" cy="212" r="11" stroke="#3FB950"/>
-    <circle class="anim pD ping" cx="560" cy="212" r="11" stroke="#F0F6FC"/>
-  </g>
+  <!-- nós -->
+  <circle class="anim nD" cx="310" cy="330" r="13" fill="#39C5CF"/>
+  <circle class="anim nA" cx="450" cy="330" r="13" fill="#58A6FF"/>
+  <circle class="anim nI" cx="450" cy="416" r="10" fill="#A371F7"/>
+  <circle class="anim o1" cx="620" cy="260" r="11" fill="#3FB950"/>
+  <circle class="anim o2" cx="620" cy="330" r="11" fill="#58A6FF"/>
+  <circle class="anim o3" cx="620" cy="400" r="11" fill="#F0F6FC"/>
 
   <g class="f" text-anchor="middle">
-    <text class="lbl a" x="200" y="258">afirmado</text>
-    <text class="lbl v" x="380" y="258">verificado</text>
-    <text class="lbl d" x="560" y="258">decidido</text>
+    <text class="node cy" x="310" y="300">DADOS</text>
+    <text class="node bl" x="450" y="300">ANÁLISE</text>
+    <text class="ia" x="450" y="448">IA aplicada</text>
+  </g>
+  <g class="f out">
+    <text class="gr" x="644" y="266">decisão</text>
+    <text class="bl" x="644" y="336">software</text>
+    <text class="wh" x="644" y="406">produto</text>
   </g>
 
-  <!-- a informação em trânsito -->
+  <!-- sinais em trânsito -->
   <g class="moving">
-    <g class="anim pulse">
-      <circle class="anim pcolor" cx="40" cy="212" r="9" filter="url(#glow)" opacity=".7"/>
-      <circle class="anim pcolor" cx="40" cy="212" r="5"/>
-    </g>
+    <g class="anim p1"><circle cx="200" cy="280" r="5" fill="#39C5CF" filter="url(#soft)" opacity=".8"/><circle cx="200" cy="280" r="3.5" fill="#D2FAFF"/></g>
+    <g class="anim p2"><circle cx="200" cy="330" r="5" fill="#39C5CF" filter="url(#soft)" opacity=".8"/><circle cx="200" cy="330" r="3.5" fill="#D2FAFF"/></g>
+    <g class="anim p3"><circle cx="200" cy="380" r="5" fill="#39C5CF" filter="url(#soft)" opacity=".8"/><circle cx="200" cy="380" r="3.5" fill="#D2FAFF"/></g>
+    <g class="anim p4"><circle cx="310" cy="330" r="6" fill="#58A6FF" filter="url(#soft)" opacity=".8"/><circle cx="310" cy="330" r="4" fill="#F0F6FC"/></g>
+    <g class="anim p5"><circle cx="450" cy="330" r="5" fill="#3FB950" filter="url(#soft)" opacity=".8"/><circle cx="450" cy="330" r="3.5" fill="#EAFBEF"/></g>
+    <g class="anim p6"><circle cx="450" cy="330" r="5" fill="#58A6FF" filter="url(#soft)" opacity=".8"/><circle cx="450" cy="330" r="3.5" fill="#EAF2FF"/></g>
+    <g class="anim p7"><circle cx="450" cy="330" r="5" fill="#F0F6FC" filter="url(#soft)" opacity=".8"/><circle cx="450" cy="330" r="3.5" fill="#FFFFFF"/></g>
+    <g class="anim pi"><circle cx="450" cy="330" r="5" fill="#A371F7" filter="url(#soft)" opacity=".8"/><circle cx="450" cy="330" r="3.5" fill="#E2C5FF"/></g>
   </g>
 </svg>
