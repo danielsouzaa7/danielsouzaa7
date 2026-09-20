@@ -4,21 +4,13 @@
 
 Começo pela decisão que o negócio precisa tomar — e só depois escolho entre dados, software ou IA para sustentá-la.
 
-## Sobre
-
-<picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/profile/about-mobile.svg"><img src="assets/profile/about.svg" width="100%" alt="Sinais soltos da operação se organizam em dados, ganham contexto e viram uma decisão, que então pede dashboard, automação ou sistema."></picture>
-
-Venho da operação — marketplace, CRM e indicadores. Isso moldou a forma como construo: primeiro entendo a decisão que o negócio precisa tomar; depois desenho os dados e o sistema que sustentam essa decisão.
-
-Não trabalho a partir da ferramenta. Trabalho a partir do problema, e a ferramenta vem depois: SQL e Power BI quando a resposta é um indicador, Python quando é um modelo de dados, software quando a decisão precisa virar operação todo dia.
-
 ## Da operação para a engenharia
 
 <picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/profile/marketplace-mobile.svg"><img src="assets/profile/marketplace.svg" width="100%" alt="Pedidos chegam e percorrem a operação, viram métricas, depois insights e finalmente sistemas. Mais de R$ 1,1 milhão em vendas e mais de 5 mil pedidos."></picture>
 
-Estruturei e conduzi a operação de marketplace de uma concessionária Honda — anúncios, pós-venda, indicadores, prevenção de fraude — da implantação até **R$ 1,1 milhão+ em vendas e mais de 5 mil pedidos**.
+Venho da operação — marketplace, CRM e indicadores. Estruturei e conduzi a operação de marketplace de uma concessionária Honda — anúncios, pós-venda, indicadores, prevenção de fraude — da implantação até **R$ 1,1 milhão+ em vendas e mais de 5 mil pedidos**.
 
-Foi ali que a pergunta deixou de ser *"quanto vendemos?"* e passou a ser *"por que vendemos isso, e o que fazer na semana que vem?"*. Os dois projetos abaixo nasceram dessa pergunta.
+Foi ali que a pergunta deixou de ser *"quanto vendemos?"* e passou a ser *"por que vendemos isso, e o que fazer na semana que vem?"*. É por isso que começo pela decisão: primeiro entendo o que o negócio precisa decidir, depois desenho os dados e o sistema que sustentam essa decisão. Os dois projetos abaixo nasceram dessa pergunta.
 
 ## Projetos em destaque
 
