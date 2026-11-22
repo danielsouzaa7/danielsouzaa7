@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 440" width="840" height="440" role="img" aria-labelledby="t d">
+  <title id="t">Analista de dados com IA — o agente pensa no servidor, o Python roda no seu navegador</title>
+  <desc id="d">Uma pergunta é digitada e o agente, no servidor, monta o plano e escreve o SQL. Um pacote com o código e os dados cruza a fronteira e o Python roda no navegador de quem perguntou, num Worker sem rede além do caminho fixo do Pyodide, e calcula a correlação r = -0,506. Por fim aparece o selo “números conferidos”, cerca de 14 segundos e custo zero.</desc>
+  <style>
+    .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; } .m { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; }
+    .brand { font-size: 23px; font-weight: 700; fill: #E6EDF7; letter-spacing: -.3px; }
+    .rule  { font-size: 17px; font-weight: 500; fill: #9FB0C8; }
+    .chip  { font-size: 18px; font-weight: 600; fill: #E6EDF7; }
+    .num   { font-size: 18px; font-weight: 700; fill: #4C7DFF; }
+    .num2  { font-size: 18px; font-weight: 700; }
+    .code  { font-size: 14px; fill: #E6EDF7; }
+    .leg   { font-size: 15px; fill: #9FB0C8; }
+    .lab   { font-size: 13px; font-weight: 700; letter-spacing: 1.4px; }
+    .small { font-size: 14px; fill: #6F83A3; }
+    .badge { font-size: 12px; font-weight: 600; fill: #39C5CF; }
+    .stgv  { font-size: 14px; font-weight: 600; fill: #BC8CFF; }
+    .big   { font-size: 28px; font-weight: 700; fill: #F0F6FC; } .rl { font-size: 17px; font-weight: 400; fill: #8B949E; }
+    .sealt { font-size: 15px; font-weight: 600; fill: #3FB950; }
+
+    /* 12s: pergunta, plano e SQL no servidor; um pacote cruza a fronteira; o Python roda no navegador; o selo fecha. */
+    .anim { animation-duration: 12s; animation-iteration-count: infinite; animation-timing-function: linear; }
+    .c1 { animation-name: c1; } .c2 { animation-name: c2; } .c3 { animation-name: c3; } .c4 { animation-name: c4; }
+    .res { animation-name: res; } .seal { animation-name: seal; } .foot { animation-name: foot; }
+    .pkt { animation-name: pkt; } .pill { animation-name: pill; } .bhi { animation-name: bhi; }
+    @keyframes c1 { 0%, 2% { opacity: 0; transform: translateY(8px); } 6%, 94% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+    @keyframes c2 { 0%, 8% { opacity: 0; transform: translateY(8px); } 12%, 94% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+    @keyframes c3 { 0%, 14% { opacity: 0; transform: translateY(8px); } 18%, 94% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+    @keyframes c4 { 0%, 42% { opacity: 0; transform: translateY(8px); } 46%, 94% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+    @keyframes dot0 { 0%, 56.0% { opacity: 0; } 58.0%, 94% { opacity: 1; } 100% { opacity: 0; } } .d0 { animation-name: dot0; } @keyframes dot1 { 0%, 56.9% { opacity: 0; } 58.9%, 94% { opacity: 1; } 100% { opacity: 0; } } .d1 { animation-name: dot1; } @keyframes dot2 { 0%, 57.8% { opacity: 0; } 59.8%, 94% { opacity: 1; } 100% { opacity: 0; } } .d2 { animation-name: dot2; } @keyframes dot3 { 0%, 58.7% { opacity: 0; } 60.7%, 94% { opacity: 1; } 100% { opacity: 0; } } .d3 { animation-name: dot3; } @keyframes dot4 { 0%, 59.6% { opacity: 0; } 61.6%, 94% { opacity: 1; } 100% { opacity: 0; } } .d4 { animation-name: dot4; } @keyframes dot5 { 0%, 60.5% { opacity: 0; } 62.5%, 94% { opacity: 1; } 100% { opacity: 0; } } .d5 { animation-name: dot5; } @keyframes dot6 { 0%, 61.4% { opacity: 0; } 63.4%, 94% { opacity: 1; } 100% { opacity: 0; } } .d6 { animation-name: dot6; } @keyframes dot7 { 0%, 62.3% { opacity: 0; } 64.3%, 94% { opacity: 1; } 100% { opacity: 0; } } .d7 { animation-name: dot7; } @keyframes dot8 { 0%, 63.2% { opacity: 0; } 65.2%, 94% { opacity: 1; } 100% { opacity: 0; } } .d8 { animation-name: dot8; } @keyframes dot9 { 0%, 64.1% { opacity: 0; } 66.1%, 94% { opacity: 1; } 100% { opacity: 0; } } .d9 { animation-name: dot9; } @keyframes dot10 { 0%, 65.0% { opacity: 0; } 67.0%, 94% { opacity: 1; } 100% { opacity: 0; } } .d10 { animation-name: dot10; } @keyframes dot11 { 0%, 65.9% { opacity: 0; } 67.9%, 94% { opacity: 1; } 100% { opacity: 0; } } .d11 { animation-name: dot11; }
+    .trend { animation-name: trend; } .ans { animation-name: foot; }
+    @keyframes trend { 0%, 66% { opacity: 0; } 70%, 94% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes res  { 0%, 56% { opacity: 0; } 60%, 94% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes seal { 0%, 70% { opacity: 0; transform: translateY(8px); } 74%, 94% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; } }
+    @keyframes foot { 0%, 76% { opacity: 0; } 80%, 94% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes pkt  { 0%, 22% { opacity: 0; transform: translateX(0); } 24% { opacity: 1; transform: translateX(0); } 38% { opacity: 1; transform: translateX(360px); } 50% { opacity: 1; transform: translateX(720px); } 54%, 100% { opacity: 0; transform: translateX(720px); } }
+    @keyframes pill { 0%, 26% { opacity: 0; } 30%, 40% { opacity: 1; } 44%, 100% { opacity: 0; } }
+    @keyframes bhi  { 0%, 36% { opacity: 0; } 40%, 46% { opacity: 1; } 54%, 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .anim { animation: none !important; } .moving { display: none; } }
+  </style>
+  <defs><filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter></defs>
+
+  <rect x="0.5" y="0.5" width="839" height="439" rx="20" fill="#0B1220" stroke="#1E2A40"/>
+  <path d="M44 33 L54 43 L44 53 L34 43 Z" fill="#4C7DFF"/><text class="f brand" x="64" y="51">Analista de dados com IA</text>
+  <text class="f rule" x="800" y="50" text-anchor="end">O Python da IA roda no seu navegador.</text>
+  <text class="f lab" x="40" y="104" fill="#9FB0C8">NO SERVIDOR · O AGENTE PENSA</text><text class="f lab" x="450" y="104" fill="#39C5CF">NO SEU NAVEGADOR · O PYTHON RODA</text><text class="f stgv" x="408" y="350" text-anchor="end">fronteira</text>
+  <line x1="420" y1="88" x2="420" y2="356" stroke="#A371F7" stroke-opacity=".6" stroke-width="2" stroke-dasharray="5 5"/>
+  <g class="moving"><line x1="420" y1="88" x2="420" y2="356" class="anim bhi" stroke="#39C5CF" stroke-width="2.5" opacity="0"/></g>
+  <line x1="60" y1="330" x2="780" y2="330" stroke="#25324A" stroke-width="2"/><circle cx="60" cy="330" r="6" fill="#4C7DFF"/><circle cx="780" cy="330" r="6" fill="#39C5CF"/><text class="f small" x="60" y="354">agente</text><text class="f small" x="780" y="354" text-anchor="end">Worker</text>
+  <g class="anim c1"><rect x="40" y="116" width="350" height="44" rx="10" fill="#131C2E" stroke="#4C7DFF" stroke-width="1.5"/><text class="f chip" x="58" y="144">O tempo de entrega afeta a nota?</text></g>
+  <g class="anim c2"><rect x="40" y="166" width="350" height="44" rx="10" fill="#131C2E" stroke="#25324A" stroke-width="1.5"/><text class="f num" x="58" y="194">Plano</text><text class="f leg" x="118" y="194">olhar colunas, cruzar tempo e nota</text></g>
+  <g class="anim c3"><rect x="40" y="216" width="350" height="64" rx="10" fill="#131C2E" stroke="#25324A" stroke-width="1.5"/><text class="m code" x="58" y="240"><tspan fill="#58A6FF">SELECT</tspan> tempo_entrega_min,</text><text class="m code" x="58" y="262">&#160;&#160;avaliacao <tspan fill="#58A6FF">FROM</tspan> pedidos</text></g>
+  <g class="anim c4"><rect x="450" y="118" width="350" height="164" rx="12" fill="#131C2E" stroke="#39C5CF" stroke-opacity=".7" stroke-width="1.5"/><rect x="652" y="130" width="136" height="24" rx="12" fill="#39C5CF" fill-opacity=".12" stroke="#39C5CF" stroke-opacity=".7"/><text class="f badge" x="720" y="146" text-anchor="middle">no seu navegador</text><text class="f num2" x="470" y="148" fill="#39C5CF">Python</text><text class="m code" x="470" y="182">r = <tspan fill="#39C5CF">teste_correlacao</tspan>(</text><text class="m code" x="470" y="202">&#160;&#160;df.tempo_entrega_min,</text><text class="m code" x="470" y="222">&#160;&#160;df.avaliacao)</text><g class="anim res"><text class="m big" x="470" y="262"><tspan class="rl">r = </tspan>-0,506</text></g><path d="M694 176V268H786" fill="none" stroke="#3A4A66" stroke-width="1.5"/><circle class="anim dot d0" cx="702" cy="190" r="3.5" fill="#F0883E" fill-opacity=".9"/><circle class="anim dot d1" cx="708" cy="204" r="3.5" fill="#F0883E" fill-opacity=".9"/><circle class="anim dot d2" cx="715" cy="187" r="3.5" fill="#F0883E" fill-opacity=".9"/><circle class="anim dot d3" cx="722" cy="209" r="3.5" fill="#F0883E" fill-opacity=".9"/><circle class="anim dot d4" cx="730" cy="200" r="3.5" fill="#F0883E" fill-opacity=".9"/><circle class="anim dot d5" cx="737" cy="220" r="3.5" fill="#F0883E" fill-opacity=".9"/><circle class="anim dot d6" cx="744" cy="208" r="3.5" fill="#F0883E" fill-opacity=".9"/><circle class="anim dot d7" cx="752" cy="228" r="3.5" fill="#F0883E" fill-opacity=".9"/><circle class="anim dot d8" cx="759" cy="218" r="3.5" fill="#F0883E" fill-opacity=".9"/><circle class="anim dot d9" cx="766" cy="238" r="3.5" fill="#F0883E" fill-opacity=".9"/><circle class="anim dot d10" cx="772" cy="230" r="3.5" fill="#F0883E" fill-opacity=".9"/><circle class="anim dot d11" cx="777" cy="251" r="3.5" fill="#F0883E" fill-opacity=".9"/><path class="anim trend" d="M700 188L782 248" stroke="#FFA657" stroke-width="2.5" stroke-linecap="round" fill="none"/></g>
+  <g class="moving"><g class="anim pkt"><circle cx="60" cy="330" r="7" fill="#39C5CF" opacity=".6" filter="url(#glow)"/><circle cx="60" cy="330" r="4.5" fill="#F0F6FC"/></g></g>
+  <g class="moving"><g class="anim pill"><rect x="304" y="298" width="124" height="24" rx="12" fill="#0B1220" stroke="#39C5CF"/><text class="f badge" x="366" y="314" text-anchor="middle">código + dados</text></g></g>
+  <g class="anim seal"><rect x="40" y="376" width="214" height="40" rx="20" fill="#3FB950" fill-opacity=".12" stroke="#3FB950" stroke-opacity=".6"/><circle cx="62" cy="396" r="11" fill="#3FB950"/><path d="M56.5 396.5l3.8 3.8 7.2-7.6" fill="none" stroke="#0B1220" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><text class="f sealt" x="81" y="401.5">números conferidos</text></g>
+  <text class="anim ans f" x="270" y="401" font-size="16" fill="#F0F6FC"><tspan font-weight="700">Sim:</tspan> quanto maior o tempo de entrega, menor a nota.</text>
+  <text class="anim foot f small" x="800" y="399" text-anchor="end">cerca de 14 s · R$ 0</text>
+</svg>

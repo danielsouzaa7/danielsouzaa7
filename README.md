@@ -10,9 +10,23 @@ Começo pela decisão que o negócio precisa tomar — e só depois escolho entr
 
 Venho da operação — marketplace, CRM e indicadores. Estruturei e conduzi a operação de marketplace de uma concessionária Honda — anúncios, pós-venda, indicadores, prevenção de fraude — da implantação até **R$ 1,1 milhão+ em vendas e mais de 5 mil pedidos**.
 
-Foi ali que a pergunta deixou de ser *"quanto vendemos?"* e passou a ser *"por que vendemos isso, e o que fazer na semana que vem?"*. É por isso que começo pela decisão: primeiro entendo o que o negócio precisa decidir, depois desenho os dados e o sistema que sustentam essa decisão. Os dois projetos abaixo nasceram dessa pergunta.
+Foi ali que a pergunta deixou de ser *"quanto vendemos?"* e passou a ser *"por que vendemos isso, e o que fazer na semana que vem?"*. É por isso que começo pela decisão: primeiro entendo o que o negócio precisa decidir, depois desenho os dados e o sistema que sustentam essa decisão. Os projetos abaixo nasceram dessa pergunta.
 
 ## Projetos em destaque
+
+<a href="https://github.com/danielsouzaa7/analista-dados-ia"><picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/projects/analista-dados-ia-mobile.svg"><img src="assets/projects/analista-dados-ia.svg" width="100%" alt="Analista de dados com IA: uma pergunta é digitada, o agente monta o plano e escreve o SQL no servidor; um pacote com o código e os dados cruza a fronteira e o Python roda no navegador de quem perguntou, calculando a correlação; por fim aparece o selo números conferidos."></picture></a>
+
+### Analista de dados com IA
+
+Quem tem dados mas não sabe SQL nem Python pergunta em português e recebe a resposta com o gráfico, cada passo à vista.
+
+- **Problema:** quem tem dados mas não sabe SQL nem Python depende de um analista para cada pergunta.
+- **Diferencial:** o agente pensa no servidor, e o Python gerado pela IA roda no navegador de quem pergunta, num Worker sem rede além do caminho fixo do Pyodide. Cada passo aparece ao vivo, com tempo e custo.
+- **Prova:** avaliação contra o modelo real publicada com a meta não batida (média de 7,0/8 em 5 rodadas, meta de 8/8); 5 rodadas de red team, cada achado corrigido com teste ou publicado como risco aceito; 10 vetores de fuga bloqueados, testados em 3 navegadores.
+- **Stack:** Python · FastAPI · DuckDB · Gemini (API compatível com OpenAI) · Pyodide em Web Worker · SSE · ECharts · pytest · Playwright
+- **Status:** [no ar](https://analista-dados-ia.onrender.com) no Render grátis (dorme após uns 15 min sem uso e leva cerca de um minuto para acordar).
+
+**[Abrir o repositório](https://github.com/danielsouzaa7/analista-dados-ia)**
 
 <a href="https://github.com/danielsouzaa7/pulse-marketplace-decision-intelligence"><picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/projects/pulse-mobile.svg"><img src="assets/projects/pulse.svg" width="100%" alt="Pulse: a média da empresa fica dentro da faixa esperada enquanto a zona 7 sai dela; o motor detecta, diagnostica, prioriza e monta a evidência, e só depois dessa fronteira o modelo de linguagem escreve a explicação."></picture></a>
 
