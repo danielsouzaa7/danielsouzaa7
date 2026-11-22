@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="400" height="480" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 732" width="400" height="732" role="img" aria-labelledby="t d">
   <title id="t">Engenharia que eu consigo provar</title>
-  <desc id="d">Pulse: 656 testes, 655 passam e 1 é pulado, documentado. Event Operations OS: 1.137 de 1.137 unitários, 649 de 649 verificações de migrations, 50 de 50 de integração, 25 de 25 de aceitação e concorrência aprovada.</desc>
+  <desc id="d">Analista de dados com IA: 713 testes passando no CI público e 97% de cobertura; avaliação contra o modelo real com média 7,0 de 8 em 5 rodadas, meta 8 de 8 não batida; 10 vetores de fuga bloqueados em 3 navegadores; 5 rodadas de red team. Pulse: 656 testes, 655 passam e 1 é pulado, documentado. Event Operations OS: 1.137 de 1.137 unitários, 649 de 649 verificações de migrations, 50 de 50 de integração, 25 de 25 de aceitação e concorrência aprovada.</desc>
   <style>
     .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
     .ttl { font-size: 18px; font-weight: 700; fill: #F0F6FC; }
@@ -8,12 +8,15 @@
     .dim { font-size: 13px; fill: #8B949E; }
 
     .anim { animation-duration: 18s; animation-iteration-count: infinite; animation-timing-function: linear; }
-    .scanA { animation-name: scanA; } .scanB { animation-name: scanB; }
-    .okA { animation-name: okA; } .okB { animation-name: okB; }
-    @keyframes scanA { 0% { transform: translateY(0); opacity: 0; } 3% { opacity: .9; } 26% { transform: translateY(158px); opacity: .9; } 30%, 100% { transform: translateY(158px); opacity: 0; } }
-    @keyframes scanB { 0%, 34% { transform: translateY(0); opacity: 0; } 37% { opacity: .9; } 60% { transform: translateY(186px); opacity: .9; } 64%, 100% { transform: translateY(186px); opacity: 0; } }
-    @keyframes okA { 0%, 27% { stroke-dashoffset: 30; opacity: 0; } 29% { opacity: 1; } 34%, 94% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 30; opacity: 0; } }
-    @keyframes okB { 0%, 61% { stroke-dashoffset: 30; opacity: 0; } 63% { opacity: 1; } 68%, 94% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 30; opacity: 0; } }
+    .scanN { animation-name: scanN; } .scanA { animation-name: scanA; } .scanB { animation-name: scanB; }
+    .okN { animation-name: okN; } .okA { animation-name: okA; } .okB { animation-name: okB; }
+
+    @keyframes scanN { 0%, 0% { transform: translateY(0); opacity: 0; } 3% { opacity: .9; } 22% { transform: translateY(170px); opacity: .9; } 26%, 100% { transform: translateY(170px); opacity: 0; } }
+    @keyframes scanA { 0%, 33% { transform: translateY(0); opacity: 0; } 36% { opacity: .9; } 55% { transform: translateY(158px); opacity: .9; } 59%, 100% { transform: translateY(158px); opacity: 0; } }
+    @keyframes scanB { 0%, 66% { transform: translateY(0); opacity: 0; } 69% { opacity: .9; } 88% { transform: translateY(186px); opacity: .9; } 92%, 100% { transform: translateY(186px); opacity: 0; } }
+    @keyframes okN { 0%, 23% { stroke-dashoffset: 30; opacity: 0; } 25% { opacity: 1; } 30%, 94% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 30; opacity: 0; } }
+    @keyframes okA { 0%, 56% { stroke-dashoffset: 30; opacity: 0; } 58% { opacity: 1; } 63%, 94% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 30; opacity: 0; } }
+    @keyframes okB { 0%, 89% { stroke-dashoffset: 30; opacity: 0; } 91% { opacity: 1; } 96%, 94% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 30; opacity: 0; } }
     @media (prefers-reduced-motion: reduce) { .anim { animation: none !important; } .moving { display: none; } }
   </style>
   <defs>
@@ -22,12 +25,28 @@
       <stop offset=".5" stop-color="#3FB950" stop-opacity=".85"/>
       <stop offset="1" stop-color="#3FB950" stop-opacity="0"/>
     </linearGradient>
+    <clipPath id="cN"><rect x="24" y="30" width="352" height="228" rx="14"/></clipPath>
     <clipPath id="cA"><rect x="24" y="30" width="352" height="186" rx="14"/></clipPath>
     <clipPath id="cB"><rect x="24" y="240" width="352" height="214" rx="14"/></clipPath>
   </defs>
 
-  <rect x="0.5" y="0.5" width="399" height="479" rx="16" fill="#0D1117" stroke="#21262D"/>
+  <rect x="0.5" y="0.5" width="399" height="731" rx="16" fill="#0D1117" stroke="#21262D"/>
 
+  <rect x="24" y="30" width="352" height="228" rx="14" fill="#161B22" stroke="#21262D"/>
+  <text class="f ttl" x="48" y="66">Analista de dados com IA</text>
+  <rect x="48" y="78" width="88" height="24" rx="12" fill="none" stroke="#3FB950"/>
+  <text class="f dim" x="92" y="95" text-anchor="middle" style="fill:#3FB950">CI público</text>
+  <g class="f row">
+    <text x="48" y="130">713 testes passando no CI</text>
+    <text x="48" y="158">97% de cobertura</text>
+    <text x="48" y="186">avaliação real: média 7,0/8</text>
+    <text x="48" y="214">10 fugas bloqueadas, 3 navegadores</text>
+  </g>
+  <text class="f dim" x="48" y="246">5 rodadas de red team; meta 8/8 não batida</text>
+  <g clip-path="url(#cN)" class="moving"><rect class="anim scanN" x="24" y="34" width="352" height="24" fill="url(#beamM)" opacity="0"/></g>
+  <path class="anim okN" d="M330 120 l8 8 l15 -17" fill="none" stroke="#3FB950" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="30" opacity="0"/>
+
+  <g transform="translate(0,252)">
   <rect x="24" y="30" width="352" height="186" rx="14" fill="#161B22" stroke="#21262D"/>
   <text class="f ttl" x="48" y="66">Pulse</text>
   <g class="f row">
@@ -50,4 +69,5 @@
   <text class="f dim" x="48" y="428">concorrência: aprovado</text>
   <g clip-path="url(#cB)" class="moving"><rect class="anim scanB" x="24" y="244" width="352" height="24" fill="url(#beamM)" opacity="0"/></g>
   <path class="anim okB" d="M330 420 l8 8 l15 -17" fill="none" stroke="#3FB950" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="30" opacity="0"/>
+  </g>
 </svg>

@@ -89,9 +89,9 @@ Escolho a ferramenta depois de entender o problema — ela é consequência dele
 
 ## Engenharia que eu consigo provar
 
-<picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/profile/evidence-mobile.svg"><img src="assets/profile/evidence.svg" width="100%" alt="Placas de evidência: Pulse com 656 testes, 655 passam e 1 pulado documentado; Event Operations OS com 1.137 de 1.137 unitários, 649 de 649 migrations, 50 de 50 integração, 25 de 25 aceitação e concorrência aprovada."></picture>
+<picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/profile/evidence-mobile.svg"><img src="assets/profile/evidence.svg" width="100%" alt="Placas de evidência: Analista de dados com IA com 713 testes passando no CI público, 97% de cobertura, avaliação contra o modelo real com média 7,0 de 8 em 5 rodadas (meta 8 de 8 não batida), 10 vetores de fuga bloqueados em 3 navegadores e 5 rodadas de red team; Pulse com 656 testes, 655 passam e 1 pulado documentado; Event Operations OS com 1.137 de 1.137 unitários, 649 de 649 migrations, 50 de 50 integração, 25 de 25 aceitação e concorrência aprovada."></picture>
 
-Números de suítes que rodam, cada um do seu projeto — sem somar um no outro. As suítes de integração e aceitação do Event Operations OS rodam contra PostgreSQL e PostgREST reais, em laboratório local descartável.
+Números de suítes que rodam, cada um do seu projeto — sem somar um no outro. Os números do Analista de dados com IA vêm do CI público no GitHub Actions, conferível por qualquer pessoa. As suítes de integração e aceitação do Event Operations OS rodam contra PostgreSQL e PostgREST reais, em laboratório local descartável.
 
 ## Contato
 
