@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 490" width="760" height="490" role="img" aria-labelledby="t d">
   <title id="t">Engenharia que eu consigo provar</title>
-  <desc id="d">Analista de dados com IA: 713 testes passando no CI público e 97% de cobertura; avaliação contra o modelo real com média 7,0 de 8 em 5 rodadas, meta 8 de 8 não batida; 10 vetores de fuga bloqueados em 3 navegadores; 5 rodadas de red team. Pulse: 656 testes, 655 passam e 1 é pulado, documentado. Event Operations OS: 1.137 de 1.137 unitários, 649 de 649 verificações de migrations, 50 de 50 de integração, 25 de 25 de aceitação e concorrência aprovada.</desc>
+  <desc id="d">Analista de dados com IA: mais de 700 testes passando no CI público e 97% de cobertura; avaliação contra o modelo real: 35 de 40 respostas completas em 5 rodadas e nenhum número inventado; 10 vetores de fuga bloqueados em 3 navegadores; 5 rodadas de red team. Pulse: 656 testes, 655 passam e 1 é pulado, documentado. Event Operations OS: 1.137 de 1.137 unitários, 649 de 649 verificações de migrations, 50 de 50 de integração, 25 de 25 de aceitação e concorrência aprovada.</desc>
   <style>
     .f { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
     .ttl { font-size: 19px; font-weight: 700; fill: #F0F6FC; }
@@ -39,12 +39,12 @@
   <rect x="610" y="60" width="96" height="26" rx="13" fill="none" stroke="#3FB950"/>
   <text class="f dim" x="658" y="78" text-anchor="middle" style="fill:#3FB950">CI público</text>
   <g class="f row">
-    <text x="56" y="120">713 testes passando no CI</text>
+    <text x="56" y="120">700+ testes passando no CI</text>
     <text x="56" y="148">97% de cobertura</text>
     <text x="396" y="120">avaliação real: média 7,0/8</text>
     <text x="396" y="148">10 fugas bloqueadas, 3 navegadores</text>
   </g>
-  <text class="f dim" x="56" y="190">5 rodadas de avaliação e 5 de red team; meta 8/8 não batida</text>
+  <text class="f dim" x="56" y="190">35 de 40 respostas completas, 0 números inventados</text>
   <g clip-path="url(#cardN)" class="moving">
     <rect class="anim scanN" x="30" y="44" width="700" height="26" fill="url(#beam)" opacity="0"/>
   </g>

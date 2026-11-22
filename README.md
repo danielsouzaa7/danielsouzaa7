@@ -22,7 +22,7 @@ Quem tem dados mas não sabe SQL nem Python pergunta em português e recebe a re
 
 - **Problema:** quem tem dados mas não sabe SQL nem Python depende de um analista para cada pergunta.
 - **Diferencial:** o agente pensa no servidor, e o Python gerado pela IA roda no navegador de quem pergunta, num Worker sem rede além do caminho fixo do Pyodide. Cada passo aparece ao vivo, com tempo e custo.
-- **Prova:** avaliação contra o modelo real publicada com a meta não batida (média de 7,0/8 em 5 rodadas, meta de 8/8); 5 rodadas de red team, cada achado corrigido com teste ou publicado como risco aceito; 10 vetores de fuga bloqueados, testados em 3 navegadores.
+- **Prova:** avaliação contra o modelo real em 5 rodadas: 35 de 40 respostas completas (87,5%) e nenhum número inventado; 5 rodadas de red team, cada achado corrigido com teste ou publicado como risco aceito; 10 vetores de fuga bloqueados, testados em 3 navegadores.
 - **Stack:** Python · FastAPI · DuckDB · Gemini (API compatível com OpenAI) · Pyodide em Web Worker · SSE · ECharts · pytest · Playwright
 - **Status:** [no ar](https://analista-dados-ia.onrender.com) no Render grátis (dorme após uns 15 min sem uso e leva cerca de um minuto para acordar).
 
@@ -89,7 +89,7 @@ Escolho a ferramenta depois de entender o problema — ela é consequência dele
 
 ## Engenharia que eu consigo provar
 
-<picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/profile/evidence-mobile.svg"><img src="assets/profile/evidence.svg" width="100%" alt="Placas de evidência: Analista de dados com IA com 713 testes passando no CI público, 97% de cobertura, avaliação contra o modelo real com média 7,0 de 8 em 5 rodadas (meta 8 de 8 não batida), 10 vetores de fuga bloqueados em 3 navegadores e 5 rodadas de red team; Pulse com 656 testes, 655 passam e 1 pulado documentado; Event Operations OS com 1.137 de 1.137 unitários, 649 de 649 migrations, 50 de 50 integração, 25 de 25 aceitação e concorrência aprovada."></picture>
+<picture><source media="(max-width: 600px)" srcset="https://github.com/danielsouzaa7/danielsouzaa7/raw/main/assets/profile/evidence-mobile.svg"><img src="assets/profile/evidence.svg" width="100%" alt="Placas de evidência: Analista de dados com IA com mais de 700 testes passando no CI público, 97% de cobertura, avaliação contra o modelo real com 35 de 40 respostas completas em 5 rodadas e nenhum número inventado, 10 vetores de fuga bloqueados em 3 navegadores e 5 rodadas de red team; Pulse com 656 testes, 655 passam e 1 pulado documentado; Event Operations OS com 1.137 de 1.137 unitários, 649 de 649 migrations, 50 de 50 integração, 25 de 25 aceitação e concorrência aprovada."></picture>
 
 Números de suítes que rodam, cada um do seu projeto — sem somar um no outro. Os números do Analista de dados com IA vêm do CI público no GitHub Actions, conferível por qualquer pessoa. As suítes de integração e aceitação do Event Operations OS rodam contra PostgreSQL e PostgREST reais, em laboratório local descartável.
 
